@@ -37,9 +37,9 @@ dark_mode: false
 # Author Profile
 # ---------------------------------------------------------------
 author:
-  name: "ANTONY MBUGUA GITHINJI"
+  name: "ANTONY"
   avatar: "/assets/images/bio-photo.jpeg"
-  bio: "BSc. Applied Computing | Cyber Shujaa Scholar | Security Researcher"
+  bio: "BSc. Applied Computing | Cyber Shujaa Scholar"
   location: "Nairobi, Kenya"
   links:
     - label: "LinkedIn"
@@ -64,8 +64,8 @@ author:
 # ---------------------------------------------------------------
 # Appearance
 # ---------------------------------------------------------------
-avatar: "/assets/images/red-team-avatar.png"
-social_preview_image: "/assets/images/cyber-meta-preview.jpg"
+avatar: "/assets/images/red-team.jpeg"
+social_preview_image: "/assets/images/cyber-meta.jpeg"
 
 # ---------------------------------------------------------------
 # Social Links & Footer
@@ -84,7 +84,7 @@ footer:
     - label: "Contact"
       icon: "fas fa-envelope"
       url: "mailto:antonymbugua742@gmail.com?subject=Cybersecurity Inquiry"
-    - label: "Résumé"
+    - label: "Resume"
       icon: "fas fa-file-pdf"
       url: "/assets/docs/resume.pdf"
 
