@@ -14,9 +14,5 @@ author_profile: true
   - Competed in team-based CTF challenges.  
   - Focused on Web Exploitation, Recon, and OSINT.
 
-- 🧪 **BITSCTF 2025 & CyberGon 2024**
-  - Hands-on DFIR and RDP enumeration labs.
-  - Wrote full reports and writeups available [here](/writeups/).
-
 More to come as I continue sharing what I learn.
 
