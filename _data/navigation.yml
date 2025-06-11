@@ -1,9 +1,15 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "Home"
+    url: /
   - title: "About"
     url: /about/
+  - title: "Writeups"
+    url: /categories/writeups/
+  - title: "Talks"
+    url: /talks/
+  - title: "Tags"
+    url: /tags/
+  - title: "Categories"
+    url: /categories/
+  - title: "Archive"
+    url: /year-archive/
