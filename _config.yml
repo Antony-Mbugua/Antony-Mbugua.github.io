@@ -2,9 +2,6 @@
 #               ANTONY MBUGUA - CYBERSECURITY PORTFOLIO
 # ---------------------------------------------------------------
 
-# ---------------------------------------------------------------
-# Site Settings
-# ---------------------------------------------------------------
 title: "ANTONY MBUGUA GITHINJI | Cybersecurity Specialist"
 tagline: "Red Team Operator | Secure Systems Architect"
 description: >-
@@ -15,7 +12,7 @@ email: antonymbugua742@gmail.com
 url: "https://antony-mbugua.github.io"
 baseurl: "" # Leave blank for GitHub Pages root
 
-repository: "antony-mbugua/antony-mbugua.github.io" # GitHub Pages source
+repository: "antony-mbugua/antony-mbugua.github.io"
 
 timezone: "Africa/Nairobi"
 permalink: pretty
@@ -33,13 +30,17 @@ search: true
 search_full_content: true
 dark_mode: false
 
+# Enable custom CSS
+sass:
+  style: compressed
+
 # ---------------------------------------------------------------
 # Author Profile
 # ---------------------------------------------------------------
 author:
   name: "ANTONY"
   avatar: "/assets/images/bio-photo.jpeg"
-  bio: "BSc. Applied Computing | Cyber Shujaa Scholar"
+  bio: "BSc. Applied Computing "
   location: "Nairobi, Kenya"
   links:
     - label: "LinkedIn"
@@ -118,7 +119,6 @@ security:
 defaults:
   - scope:
       path: ""
-      type: posts
     values:
       layout: single
       author_profile: true
@@ -127,6 +127,7 @@ defaults:
       share: true
       related: true
       toc: true
+      css: "/assets/css/custom.css"  # 👈 Add this line to apply custom avatar styling
 
   - scope:
       path: "_pages"
