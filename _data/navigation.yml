@@ -9,6 +9,10 @@ main:
     url: /talks/
   - title: "Tags"
     url: /tags/
+  - title: "Resume"
+    url: /resume/
+  - title: "Contact"
+    url: /contact/
   - title: "Categories"
     url: /categories/
   - title: "Archive"
