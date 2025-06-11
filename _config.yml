@@ -53,7 +53,6 @@ author:
       icon: "fas fa-scroll"
       url: "/tags/#writeups"
 
-# Navigation 
 defaults:
   - scope:
       path: ""
@@ -65,7 +64,7 @@ defaults:
       comments: false
       share: true
       related: true
-      toc: true 
+      toc: true
 
   - scope:
       path: "_pages"
@@ -73,6 +72,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+      toc: true
+      sidebar:
+        nav: "main"
+
 
 # Collections
 collections:
