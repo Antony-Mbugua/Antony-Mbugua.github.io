@@ -142,6 +142,9 @@ defaults:
 # Collections
 # ---------------------------------------------------------------
 collections:
+  pages:
+    output: true
+    permalink: /:path/
   projects:
     output: true
     permalink: /projects/:path/
