@@ -1,71 +1,59 @@
-title: ANTONY MBUGUA GITHINJI | Cybersecurity Expert
+# Site Settings
+title: ANTONY MBUGUA GITHINJI | Cybersecurity Specialist
 email: antonymbugua742@gmail.com
 description: >-
-  Cybersecurity enthusiast & Applied Computing finalist specializing in Information Security & Forensics. 
-  Passionate about ethical hacking, network defense, and building secure systems.
-twitter_username: antonymbugua742
-github_username: antonymbugua742
-minimal_mistakes_skin: dark
+  Information Security finalist | Ethical Hacker | Security Researcher 
+  Specializing in penetration testing, threat intelligence, and secure system development.
+baseurl: ""
+url: "https://antony-mbugua.github.io" 
+repository: antony-mbugua/antony-mbugua.github.io # For GitHub Pages
+
+# Appearance
+minimal_mistakes_skin: dark # Cyber-appropriate dark theme
 search: true
+search_full_content: true
+dark_mode: true
 
-# Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-permalink: /:categories/:title/
-paginate: 5
-paginate_path: /page:num/
-timezone: Africa/Nairobi
+# Security Headers 
+security_headers: true
 
-include:
-  - _pages
-
+# Plugins
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
-  - jekyll-gist
+  - jekyll-seo-tag
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-avatar
 
+# Author Profile
 author:
-  name   : "ANTONY MBUGUA GITHINJI"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Applied Computing finalist | Cybersecurity learner | Ethical hacking enthusiast"
+  name: "ANTONY MBUGUA GITHINJI"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "BSc. Applied Computing | Cyber Shujaa Scholar | Security Researcher"
+  location: "Nairobi, Kenya"
   links:
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/antony-mbugua"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/antony-mbugua"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-github"
       url: "https://github.com/antony-mbugua"
-    - label: "Hack The Box"
-      icon: "fas fa-fw fa-terminal"
+    - label: "HackTheBox"
+      icon: "fas fa-terminal"
       url: "https://app.hackthebox.com/profile/kiregi742"
     - label: "TryHackMe"
-      icon: "fas fa-fw fa-user-secret"
+      icon: "fas fa-user-secret"
       url: "https://tryhackme.com/p/incog742"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:antonymbugua742@gmail.com"
+    - label: "PGP Key"
+      icon: "fas fa-key"
+      url: "/pgp-key" # Create this page later
+    - label: "Writeups"
+      icon: "fas fa-scroll"
+      url: "/tags/#writeups"
 
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/antonymbugua742"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/antonymbugua742"
-    - label: "Hack The Box"
-      icon: "fas fa-fw fa-terminal"
-      url: "https://app.hackthebox.com/profile/kiregi742"
-    - label: "TryHackMe"
-      icon: "fas fa-fw fa-user-secret"
-      url: "https://tryhackme.com/p/incog742"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:antonymbugua742@gmail.com"
-
+# Navigation 
 defaults:
   - scope:
       path: ""
@@ -77,6 +65,7 @@ defaults:
       comments: false
       share: true
       related: true
+      toc: true 
 
   - scope:
       path: "_pages"
@@ -85,10 +74,39 @@ defaults:
       layout: single
       author_profile: true
 
-category_archive:
-  type: liquid
-  path: /categories/
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  writeups:
+    output: true
+    permalink: /writeups/:path/
 
-tag_archive:
-  type: liquid
-  path: /tags/
+# Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/antonymbugua742"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/antonymbugua742"
+    - label: "HTB Profile"
+      icon: "fas fa-terminal"
+      url: "https://app.hackthebox.com/profile/kiregi742"
+    - label: "Contact"
+      icon: "fas fa-envelope"
+      url: "mailto:antonymbugua742@gmail.com?subject=Cybersecurity Inquiry"
+    - label: "Résumé"
+      icon: "fas fa-file-pdf"
+      url: "/assets/docs/resume.pdf"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+remote_theme: mmistakes/minimal-mistakes@4.24.0
+plugins_dir: ./_plugins
+incremental: false
+future: false
+timezone: Africa/Nairobi
