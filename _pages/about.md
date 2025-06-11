@@ -4,7 +4,7 @@ permalink: /about/
 layout: single
 author_profile: true
 header:
-  overlay_image: /assets/images/cyber-header.jpg
+  overlay_image: /assets/images/cyber-bg.jpg
   overlay_filter: rgba(0, 0, 0, 0.7)
   actions:
     - label: "View My Projects"
