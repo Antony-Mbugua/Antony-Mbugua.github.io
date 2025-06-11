@@ -1,4 +1,4 @@
-title: ANTONY MBUGUA GITHINJI | Cybersecurity Portfolio
+title: ANTONY MBUGUA GITHINJI | Cybersecurity Expert
 email: antonymbugua742@gmail.com
 description: >-
   Cybersecurity enthusiast & Applied Computing finalist specializing in Information Security & Forensics. 
@@ -29,7 +29,7 @@ plugins:
 
 author:
   name   : "ANTONY MBUGUA GITHINJI"
-  avatar : "/assets/images/bio-photo.jpg" # Replace this with your actual image
+  avatar : "/assets/images/bio-photo.jpg"
   bio    : "Applied Computing finalist | Cybersecurity learner | Ethical hacking enthusiast"
   links:
     - label: "LinkedIn"
