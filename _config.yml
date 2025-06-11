@@ -1,34 +1,41 @@
+# ---------------------------------------------------------------
+#               ANTONY MBUGUA - CYBERSECURITY PORTFOLIO
+# ---------------------------------------------------------------
+
+# ---------------------------------------------------------------
 # Site Settings
-title: ANTONY MBUGUA GITHINJI | Cybersecurity Specialist
-email: antonymbugua742@gmail.com
+# ---------------------------------------------------------------
+title: "ANTONY MBUGUA GITHINJI | Cybersecurity Specialist"
+tagline: "Red Team Operator | Secure Systems Architect"
 description: >-
   Information Security finalist | Ethical Hacker | Security Researcher 
   Specializing in penetration testing, threat intelligence, and secure system development.
-baseurl: ""
-url: "https://antony-mbugua.github.io" 
-repository: antony-mbugua/antony-mbugua.github.io # For GitHub Pages
 
-# Appearance
-minimal_mistakes_skin: dark # Cyber-appropriate dark theme
+email: antonymbugua742@gmail.com
+url: "https://antony-mbugua.github.io"
+baseurl: "" # Leave blank for GitHub Pages root
+
+repository: "antony-mbugua/antony-mbugua.github.io" # GitHub Pages source
+
+timezone: "Africa/Nairobi"
+permalink: pretty
+markdown: kramdown
+highlighter: rouge
+future: false
+incremental: false
+
+# ---------------------------------------------------------------
+# Theme Settings
+# ---------------------------------------------------------------
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "dark"
 search: true
 search_full_content: true
-dark_mode: true
+dark_mode: false
 
-# Security Headers 
-security_headers: true
-
-# Plugins
-plugins:
-  - jekyll-remote-theme
-  - jekyll-paginate-v2
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-  - jekyll-avatar
-
+# ---------------------------------------------------------------
 # Author Profile
+# ---------------------------------------------------------------
 author:
   name: "ANTONY MBUGUA GITHINJI"
   avatar: "/assets/images/bio-photo.jpeg"
@@ -49,11 +56,65 @@ author:
       url: "https://tryhackme.com/p/incog742"
     - label: "PGP Key"
       icon: "fas fa-key"
-      url: "/pgp-key" # Create this page later
+      url: "/pgp-key"
     - label: "Writeups"
       icon: "fas fa-scroll"
       url: "/tags/#writeups"
 
+# ---------------------------------------------------------------
+# Appearance
+# ---------------------------------------------------------------
+avatar: "/assets/images/red-team-avatar.png"
+social_preview_image: "/assets/images/cyber-meta-preview.jpg"
+
+# ---------------------------------------------------------------
+# Social Links & Footer
+# ---------------------------------------------------------------
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/antonymbugua742"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/antonymbugua742"
+    - label: "HTB Profile"
+      icon: "fas fa-terminal"
+      url: "https://app.hackthebox.com/profile/kiregi742"
+    - label: "Contact"
+      icon: "fas fa-envelope"
+      url: "mailto:antonymbugua742@gmail.com?subject=Cybersecurity Inquiry"
+    - label: "Résumé"
+      icon: "fas fa-file-pdf"
+      url: "/assets/docs/resume.pdf"
+
+# ---------------------------------------------------------------
+# Plugins
+# ---------------------------------------------------------------
+plugins:
+  - jekyll-remote-theme
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-avatar
+
+plugins_dir: ./_plugins
+
+# ---------------------------------------------------------------
+# Security Headers
+# ---------------------------------------------------------------
+security_headers: true
+security:
+  headers: true
+  csp: "default-src 'self'"
+  feature_policy: "camera 'none'"
+
+# ---------------------------------------------------------------
+# Content Defaults
+# ---------------------------------------------------------------
 defaults:
   - scope:
       path: ""
@@ -77,8 +138,9 @@ defaults:
       sidebar:
         nav: "main"
 
-
+# ---------------------------------------------------------------
 # Collections
+# ---------------------------------------------------------------
 collections:
   projects:
     output: true
@@ -87,30 +149,34 @@ collections:
     output: true
     permalink: /writeups/:path/
 
-# Footer
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/antonymbugua742"
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://linkedin.com/in/antonymbugua742"
-    - label: "HTB Profile"
-      icon: "fas fa-terminal"
-      url: "https://app.hackthebox.com/profile/kiregi742"
-    - label: "Contact"
-      icon: "fas fa-envelope"
-      url: "mailto:antonymbugua742@gmail.com?subject=Cybersecurity Inquiry"
-    - label: "Résumé"
-      icon: "fas fa-file-pdf"
-      url: "/assets/docs/resume.pdf"
+# ---------------------------------------------------------------
+# Engagement Platforms
+# ---------------------------------------------------------------
+ctf_profiles:
+  hackthebox: "https://app.hackthebox.com/profile/kiregi742"
+  tryhackme: "https://tryhackme.com/p/incog742"
+  ctftime: "https://ctftime.org/user/12345"
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-remote_theme: mmistakes/minimal-mistakes@4.24.0
-plugins_dir: ./_plugins
-incremental: false
-future: false
-timezone: Africa/Nairobi
+# ---------------------------------------------------------------
+# Security Credentials
+# ---------------------------------------------------------------
+certifications:
+  - name: "Introduction to Cybersecurity"
+    issuer: "Cisco"
+    date: "2025–Present"
+    verify: "https://www.credly.com/users/antonymbugua742.9c238788"
+  - name: "OPSWAT Introduction to Critical Infrastructure Protection (ICIP)"
+    issuer: "OPSWAT"
+    date: "2025"
+    verify: "https://www.credly.com/users/antonymbugua742.9c238788"
+
+# ---------------------------------------------------------------
+# Exclude From Build
+# ---------------------------------------------------------------
+exclude:
+  - "*.lock"
+  - "*.gem"
+  - "vendor"
+  - "Gemfile"
+  - "README.md"
+  - "LICENSE"
