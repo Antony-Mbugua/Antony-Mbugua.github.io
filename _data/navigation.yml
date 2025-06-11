@@ -2,7 +2,7 @@ main:
   - title: "Home"
     url: /
   - title: "About"
-    url: pages/about/
+    url: /about/
   - title: "Writeups"
     url: /writeups/
   - title: "Talks"
