@@ -5,11 +5,27 @@ layout: single
 author_profile: true
 ---
 
-I’m Antony Mbugua Githinji, a Cybersecurity enthusiast and Applied Computing finalist at KCA University.  
-I enjoy participating in CTFs, exploring ethical hacking, and working on real-world security projects.
+👋🏽 Hi there, I'm **Antony Mbugua Githinji**, a finalist in BSc. Applied Computing – Information Security & Forensics at KCA University, set to graduate in **November 2025**.
 
-- 🎓 Finalist in BSc Applied Computing – Information Security & Forensics  
-- 🔐 Interests: Penetration Testing, DFIR, Network Security  
-- 🏴 HTB: [kiregi742](https://app.hackthebox.com/profile/kiregi742)  
-- 🧠 TryHackMe: [incog742](https://tryhackme.com/p/incog742)
-- 🏅 Credly: [View my badges](https://www.credly.com/users/antonymbugua742.9c238788)
+I'm currently a **Cybersecurity Intern at The Red Users**, and I’ve built multiple systems including a fully functional **Trucking Management System** for two US-based logistics companies: [All Over Logistics](https://alloverlogistics.com) and [277 Logistics](https://277logistics.com).
+
+### 🎯 Skills & Interests
+
+- ✅ Ethical Hacking & CTF Writeups  
+- ✅ Network Security & SIEM Tools  
+- ✅ Threat Intelligence & Cloud Security  
+- ✅ Laravel, Node.js, React.js, MySQL  
+- ✅ Git, Linux, Bash, Wireshark
+
+### 🏁 Learning Progress
+
+- **Cyber Shujaa Program** – Cloud & Network Security  
+- **Hack The Box Academy** – Fundamental to Advanced Labs  
+- **TryHackMe** – Introductory and hands-on cybersecurity labs  
+- **Coursera** – Cybersecurity Fundamentals
+
+### 🛡️ Mission
+
+To become a well-rounded cybersecurity professional who protects systems, educates users, and builds secure solutions that scale.
+
+> “Security is not a product, but a process.” – Bruce Schneier
