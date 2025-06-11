@@ -37,15 +37,6 @@ excerpt: "OFFENSIVE SECURITY, DEFENSIVE SECURITY & PROGRAMMING WORK"
 </style>
 
 <div class="project-grid">
-  <!-- Pentesting Projects -->
-  <div class="project-card">
-    <h3><i class="fas fa-bug"></i> VULNERABILITY RESEARCH</h3>
-    <p>Discovered 5+ CVEs in Laravel applications including SQLi and XSS flaws</p>
-    <div class="project-links">
-      <a href="#" class="btn btn--small btn--primary">Report</a>
-      <a href="#" class="btn btn--small btn--info">PoC</a>
-    </div>
-  </div>
 
   <!-- Dev Projects -->
   <div class="project-card">
@@ -53,11 +44,11 @@ excerpt: "OFFENSIVE SECURITY, DEFENSIVE SECURITY & PROGRAMMING WORK"
     <p>Secure logistics platform for US companies with RBAC and audit logging</p>
     <div class="project-links">
       <a href="https://alloverlogistics.com" class="btn btn--small btn--success">Live Demo</a>
-      <a href="#" class="btn btn--small">Case Study</a>
+      <a href="#" class="btn btn--small"></a>
     </div>
         <div class="project-links">
       <a href="https://277logistics.com" class="btn btn--small btn--success">Live Demo</a>
-      <a href="#" class="btn btn--small">Case Study</a>
+      <a href="#" class="btn btn--small"></a>
     </div>
   </div>
 
