@@ -62,4 +62,4 @@ excerpt: "OFFENSIVE SECURITY, DEFENSIVE SECURITY & PROGRAMMING WORK"
   </div>
 </div>
 
-{% include credits.html %}
+
