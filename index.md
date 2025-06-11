@@ -3,17 +3,17 @@ layout: home
 title: "CYBERSECURITY SPECIALIST"
 permalink: /
 author_profile: true
-header:
-  overlay_image: /assets/images/cyber-matrix-bg.jpg
-  overlay_filter: rgba(0, 0, 0, 0.85)
-  overlay_filter: "linear-gradient(rgba(10, 30, 60, 0.9), rgba(0, 200, 100, 0.3))"
-  actions:
-    - label: "<i class='fas fa-terminal'></i> EXPLORE MY WORK"
-      url: "/projects/"
-      class: "btn--glow"
-    - label: "<i class='fas fa-shield-alt'></i> CONTACT ME"
-      url: "/contact/"
-      class: "btn--danger"
+## header:
+  ## overlay_image: /assets/images/cyber-matrix-bg.jpg
+  ## overlay_filter: rgba(0, 0, 0, 0.85)
+  ## overlay_filter: "linear-gradient(rgba(10, 30, 60, 0.9), rgba(0, 200, 100, 0.3))"
+ ## actions:
+  ##  - label: "<i class='fas fa-terminal'></i> EXPLORE MY WORK"
+  ##    url: "/projects/"
+  ##    class: "btn--glow"
+  ##  - label: "<i class='fas fa-shield-alt'></i> CONTACT ME"
+  ##    url: "/contact/"
+     ## class: "btn--danger"
 excerpt: "SECURING DIGITAL FRONTIERS THROUGH OFFENSIVE & DEFENSIVE STRATEGIES"
 feature_row:
   - title: "PENETRATION TESTING"
