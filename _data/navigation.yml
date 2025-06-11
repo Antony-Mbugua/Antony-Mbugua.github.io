@@ -4,7 +4,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Writeups"
-    url: /categories/writeups/
+    url: /writeups/
   - title: "Talks"
     url: /talks/
   - title: "Tags"
