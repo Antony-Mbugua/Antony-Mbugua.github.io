@@ -19,6 +19,7 @@ security_headers: true
 
 # Plugins
 plugins:
+  - jekyll-remote-theme
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-seo-tag
