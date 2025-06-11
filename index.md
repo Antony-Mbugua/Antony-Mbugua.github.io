@@ -180,7 +180,7 @@ blockquote:before {
     <div class="credential-badge">
       <h3><i class="fab fa-creative-commons"></i> Credly Badges</h3>
       <p>View all my certifications</p>
-      <a href="https://www.credly.com/users/antony-mbugua/badges" target="_blank" class="btn btn--small">View</a>
+      <a href="https://www.credly.com/users/antonymbugua742.9c238788/badges" target="_blank" class="btn btn--small">View</a>
     </div>
   </div>
 
