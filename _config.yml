@@ -5,12 +5,12 @@
 title: "ANTONY"
 tagline: "Red Team Operator | Secure Systems Architect"
 description: >-
-  Information Security finalist | Ethical Hacker 
-  Specializing in penetration testing, threat intelligence, and secure system development.
+  Final-year Information Security student and Ethical Hacker.
+  Passionate about penetration testing, threat intelligence, and secure system development.
 
 email: antonymbugua742@gmail.com
 url: "https://antony-mbugua.github.io"
-baseurl: "" # Leave blank for GitHub Pages root
+baseurl: ""
 
 repository: "antony-mbugua/antony-mbugua.github.io"
 
@@ -18,8 +18,6 @@ timezone: "Africa/Nairobi"
 permalink: pretty
 markdown: kramdown
 highlighter: rouge
-future: false
-incremental: false
 
 # ---------------------------------------------------------------
 # Theme Settings
@@ -28,9 +26,8 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "dark"
 search: true
 search_full_content: true
-dark_mode: false
+dark_mode: true
 
-# Enable custom CSS
 sass:
   style: compressed
 
@@ -38,53 +35,47 @@ sass:
 # Author Profile
 # ---------------------------------------------------------------
 author:
-  name: "ANTONY MBUGUA GITHINJI"
+  name: "Antony Mbugua Githinji"
   avatar: "/assets/images/bio-photo.jpeg"
-  bio: "BSc. Applied Computing "
+  bio: "Red Teamer | InfoSec Student | Applied Computing @ KCA"
   location: "Nairobi, Kenya"
   links:
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://linkedin.com/in/antony-mbugua"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/antony-mbugua"
-    - label: "HackTheBox"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/antony-mbugua"
+    - label: "Hack The Box"
       icon: "fas fa-terminal"
       url: "https://app.hackthebox.com/profile/kiregi742"
     - label: "TryHackMe"
       icon: "fas fa-user-secret"
       url: "https://tryhackme.com/p/incog742"
-    - label: "PGP Key"
-      icon: "fas fa-key"
-      url: "/pgp-key"
-    - label: "Writeups"
-      icon: "fas fa-scroll"
-      url: "/tags/#writeups"
 
 # ---------------------------------------------------------------
-# Appearance
+# Appearance & Preview
 # ---------------------------------------------------------------
 avatar: "/assets/images/red-team.jpeg"
 social_preview_image: "/assets/images/cyber-meta.jpeg"
 
 # ---------------------------------------------------------------
-# Social Links & Footer
+# Footer
 # ---------------------------------------------------------------
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-github"
-      url: "https://github.com/antonymbugua742"
+      url: "https://github.com/antony-mbugua"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
-      url: "https://linkedin.com/in/antonymbugua742"
-    - label: "HTB Profile"
+      url: "https://linkedin.com/in/antony-mbugua"
+    - label: "Hack The Box"
       icon: "fas fa-terminal"
       url: "https://app.hackthebox.com/profile/kiregi742"
-    - label: "Contact"
-      icon: "fas fa-envelope"
-      url: "mailto:antonymbugua742@gmail.com?subject=Cybersecurity Inquiry"
+    - label: "TryHackMe"
+      icon: "fas fa-user-secret"
+      url: "https://tryhackme.com/p/incog742"
     - label: "Resume"
       icon: "fas fa-file-pdf"
       url: "/assets/docs/resume.pdf"
@@ -94,24 +85,11 @@ footer:
 # ---------------------------------------------------------------
 plugins:
   - jekyll-remote-theme
-  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-  - jekyll-avatar
-
-plugins_dir: ./_plugins
-
-# ---------------------------------------------------------------
-# Security Headers
-# ---------------------------------------------------------------
-security_headers: true
-security:
-  headers: true
-  csp: "default-src 'self'"
-  feature_policy: "camera 'none'"
 
 # ---------------------------------------------------------------
 # Content Defaults
@@ -123,11 +101,13 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
       share: true
       related: true
       toc: true
-      css: "/assets/css/custom.css"  # 👈 Add this line to apply custom avatar styling
+      toc_label: "Table of Contents"
+      toc_sticky: true
+      classes: wide
+      css: "/assets/css/custom.css"
 
   - scope:
       path: "_pages"
@@ -138,6 +118,19 @@ defaults:
       toc: true
       sidebar:
         nav: "main"
+
+  - scope:
+      path: ""
+      type: writeups
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      toc: true
+      toc_label: "Table of Contents"
+      toc_sticky: true
+      classes: wide
 
 # ---------------------------------------------------------------
 # Collections
@@ -152,39 +145,14 @@ collections:
   writeups:
     output: true
     permalink: /writeups/:name/
-defaults:
-  - scope:
-      path: ""
-      type: writeups
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      share: true
-      related: true
-      toc: true
-      toc_label: "Table of Contents"
 
 # ---------------------------------------------------------------
-# Engagement Platforms
+# Security Headers
 # ---------------------------------------------------------------
-ctf_profiles:
-  hackthebox: "https://app.hackthebox.com/profile/kiregi742"
-  tryhackme: "https://tryhackme.com/p/incog742"
-  ctftime: "https://ctftime.org/user/12345"
-
-# ---------------------------------------------------------------
-# Security Credentials
-# ---------------------------------------------------------------
-certifications:
-  - name: "Introduction to Cybersecurity"
-    issuer: "Cisco"
-    date: "2025–Present"
-    verify: "https://www.credly.com/users/antonymbugua742.9c238788"
-  - name: "OPSWAT Introduction to Critical Infrastructure Protection (ICIP)"
-    issuer: "OPSWAT"
-    date: "2025"
-    verify: "https://www.credly.com/users/antonymbugua742.9c238788"
+security:
+  headers: true
+  csp: "default-src 'self'; img-src 'self' data:;"
+  feature_policy: "camera 'none'"
 
 # ---------------------------------------------------------------
 # Exclude From Build
