@@ -1,19 +1,36 @@
 main:
   - title: "Home"
     url: /
+    icon: "fas fa-home"
+
   - title: "About"
     url: /about/
+    icon: "fas fa-user"
+
   - title: "Writeups"
     url: /writeups/
+    icon: "fas fa-scroll"
+
   - title: "Talks"
     url: /talks/
+    icon: "fas fa-microphone"
+
   - title: "Tags"
     url: /tags/
+    icon: "fas fa-tags"
+
   - title: "Resume"
     url: /resume/
+    icon: "fas fa-file-alt"
+
   - title: "Contact"
     url: /contact/
+    icon: "fas fa-envelope"
+
   - title: "Categories"
     url: /categories/
+    icon: "fas fa-folder-open"
+
   - title: "Archive"
     url: /year-archive/
+    icon: "fas fa-archive"
