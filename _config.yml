@@ -2,7 +2,7 @@
 #               ANTONY MBUGUA - CYBERSECURITY PORTFOLIO
 # ---------------------------------------------------------------
 
-title: "ANTONY"
+title: ""
 tagline: "Red Team Operator | Secure Systems Architect"
 description: >-
   Final-year Information Security student and Ethical Hacker.
@@ -39,6 +39,34 @@ author:
   avatar: "/assets/images/bio-photo.jpeg"
   bio: "Bsc. Applied Computing/ CyberSecurity Enthusiast"
   location: "Nairobi, Kenya"
+  links:
+    - label: "🏠 Home"
+      icon: "fas fa-home"
+      url: "/"
+    - label: "🧠 About"
+      icon: "fas fa-user"
+      url: "/about/"
+    - label: "🛠️ Writeups"
+      icon: "fas fa-pen-nib"
+      url: "/writeups/"
+    - label: "🎤 Talks"
+      icon: "fas fa-microphone"
+      url: "/talks/"
+    - label: "🏷️ Tags"
+      icon: "fas fa-tags"
+      url: "/tags/"
+    - label: "📁 Categories"
+      icon: "fas fa-folder-open"
+      url: "/categories/"
+    - label: "📜 Resume"
+      icon: "fas fa-file-pdf"
+      url: "/resume/"
+    - label: "📬 Contact"
+      icon: "fas fa-envelope"
+      url: "/contact/"
+    - label: "🗃️ Archive"
+      icon: "fas fa-archive"
+      url: "/year-archive/"
 
 # ---------------------------------------------------------------
 # Appearance & Preview
