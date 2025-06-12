@@ -39,19 +39,6 @@ author:
   avatar: "/assets/images/bio-photo.jpeg"
   bio: "Bsc. Applied Computing/ CyberSecurity Enthusiast"
   location: "Nairobi, Kenya"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/antony-mbugua"
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://linkedin.com/in/antony-mbugua"
-    - label: "Hack The Box"
-      icon: "fas fa-terminal"
-      url: "https://app.hackthebox.com/profile/kiregi742"
-    - label: "TryHackMe"
-      icon: "fas fa-user-secret"
-      url: "https://tryhackme.com/p/incog742"
 
 # ---------------------------------------------------------------
 # Appearance & Preview
@@ -79,6 +66,9 @@ footer:
     - label: "Resume"
       icon: "fas fa-file-pdf"
       url: "/assets/docs/resume.pdf"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:antonymbugua742@gmail.com"
 
 # ---------------------------------------------------------------
 # Plugins
