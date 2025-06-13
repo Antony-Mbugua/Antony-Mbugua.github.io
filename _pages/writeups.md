@@ -1,9 +1,12 @@
 ---
 title: "Writeups"
+layout: collection
 permalink: /writeups/
-layout: single
-author_profile: true
+collection: writeups
+entries_layout: grid
+classes: wide
 ---
+
 
 ## 🧪 TryHackMe – “Brute It”
 
