@@ -7,7 +7,7 @@ classes: wide
 tags: [tryhackme, brute-force, ssh, hydra]
 ---
 
-![Brute It Screenshot](/assets/images/tryhackme-brute.png)
+![Brute It Screenshot](/assets/images/tryhackme-brute-it.png)
 
 ## Target
 Brute-force login credentials over SSH
