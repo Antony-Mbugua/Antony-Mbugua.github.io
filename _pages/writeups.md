@@ -5,23 +5,20 @@ permalink: /writeups/
 collection: writeups
 entries_layout: grid
 classes: wide
+author_profile: true
 ---
 
+## 🛠️ Cybersecurity Writeups
 
-## 🧪 TryHackMe – “Brute It”
+  Welcome to my curated collection of cybersecurity walkthroughs and Ethical Hacking (CTFs) reports. These writeups document my hands-on experience with platforms like **TryHackMe**, **Hack The Box**, **VulnHub**and other practical labs. Each entry covers:
 
-- **Target:** Brute-force login credentials over SSH
-- **Tools:** Hydra, Nmap, Kali Linux
-- **Steps:**
-  1. Nmap port scan
-  2. Found SSH open on port 22
-  3. Used Hydra for brute-forcing
-- **Lessons:** Importance of locking accounts and monitoring login attempts
+- 🔍 Target overview
+- 🧰 Tools and methodology used
+- 🧠 Lessons learned
+- 📝 Step-by-step exploitation
 
-## 💣 Hack The Box – “Lame”
+Whether you’re a fellow learner or recruiter, feel free to explore my journey in breaking, securing, and learning from machines.
 
-- **Target:** Exploit vulnerable Samba version
-- **Approach:** Enum4linux, Metasploit exploit
-- **Result:** Shell gained, root via local misconfig
-- **Lessons:** Patch management is critical
+---
 
+{% include feature_row id="writeup_highlight" type="left" %}
