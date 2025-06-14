@@ -10,7 +10,11 @@ tags: [tryhackme, brute-force, ssh, hydra]
 ![Brute It Screenshot](/assets/images/tryhackme-brute-it.png)
 
 ## Target
-Brute-force login credentials over SSH
+- Brute-force login credentials over SSH
+
+- Hash cracking
+
+- Privilege escalation
 
 ## Tools Used
 - Hydra
