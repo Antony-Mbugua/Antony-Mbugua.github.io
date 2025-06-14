@@ -1,5 +1,5 @@
 ---
-title: "Writeups"
+title: "🛠️ Cybersecurity Writeups"
 layout: collection
 permalink: /writeups/
 collection: writeups
@@ -9,16 +9,18 @@ author_profile: true
 related: false
 ---
 
-## 🛠️ Cybersecurity Writeups
+## ✍️ Ethical Hacking Reports & CTF Walkthroughs
 
-  Welcome to my curated collection of cybersecurity walkthroughs and Ethical Hacking (CTFs) reports. These writeups document my hands-on experience with platforms like **TryHackMe**, **Hack The Box**, **VulnHub**and other practical labs. Each entry covers:
+Welcome to my personal collection of cybersecurity writeups, ethical hacking walkthroughs, and CTF (Capture The Flag) reports. These entries are based on hands-on labs and challenges from platforms like **TryHackMe**, **Hack The Box**, **VulnHub**, and other simulated environments.
 
-- 🔍 Target overview
-- 🧰 Tools and methodology used
-- 🧠 Lessons learned
-- 📝 Step-by-step exploitation
+Each writeup typically includes:
 
-Whether you’re a fellow learner or recruiter, feel free to explore my journey in breaking, securing, and learning from machines.
+- 🔍 **Target Overview** – What the machine or lab is about  
+- 🧰 **Tools & Techniques Used** – Recon, enumeration, exploitation  
+- 🧠 **Lessons Learned** – Key takeaways from the challenge  
+- 📝 **Step-by-Step Exploitation** – Commands, screenshots, and logic
+
+Whether you're a fellow cybersecurity enthusiast, student, or recruiter, feel free to explore my technical journey in breaking into, securing, and analyzing systems.
 
 ---
 
