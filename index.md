@@ -123,7 +123,7 @@ blockquote {
     <div class="credential-badge">
       <h3>(ISC)2</h3>
       <p>CC Cybersecurity</p>
-      <a href="https://www.netacad.com" target="_blank">Verify</a>
+      <a href="https://www.isc2.org" target="_blank">Verify</a>
     </div>
     <div class="credential-badge">
       <h3>Credly Certifications</h3>
