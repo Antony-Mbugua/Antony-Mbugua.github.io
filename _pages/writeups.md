@@ -12,64 +12,72 @@ Welcome to my curated collection of walkthroughs and CTF reports.
 
 ---
 
-{% include feature_row id="writeup_highlight" type="left" %}
-
----
-
-<div class="writeup-grid">
-  {% for post in site.writeups %}
-    <div class="writeup-card">
-      <a href="{{ post.url | relative_url }}">
-        <img src="{{ post.image | default: '/assets/images/writeup-thumb.jpeg' }}" alt="{{ post.title }}">
-        <div class="writeup-content">
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.excerpt | markdownify | strip_html | truncate: 100 }}</p>
+<div class="chirpy-writeup-grid">
+  {% assign writeups = site.data.feature_row.writeup_highlight %}
+  {% for item in writeups %}
+    <article class="chirpy-post-card">
+      <a href="{{ item.url | relative_url }}">
+        <div class="chirpy-thumbnail">
+          <img src="{{ item.image_path | relative_url }}" alt="{{ item.alt }}">
+        </div>
+        <div class="chirpy-post-content">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.excerpt | strip_html | truncate: 140 }}</p>
         </div>
       </a>
-    </div>
+    </article>
   {% endfor %}
 </div>
 
 <style>
-.writeup-grid {
+.chirpy-writeup-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
-.writeup-card {
-  background: #1e1e1e;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.chirpy-post-card {
+  background: #1a1a1a;
   border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.writeup-card:hover {
+.chirpy-post-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-.writeup-card img {
+.chirpy-post-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.chirpy-thumbnail img {
   width: 100%;
-  height: 160px;
+  height: 180px;
   object-fit: cover;
+  display: block;
 }
 
-.writeup-content {
+.chirpy-post-content {
   padding: 1rem;
 }
 
-.writeup-content h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+.chirpy-post-content h3 {
+  font-size: 1.2rem;
   color: #00bfff;
+  margin: 0 0 0.5rem;
 }
 
-.writeup-content p {
+.chirpy-post-content p {
   font-size: 0.9rem;
   color: #ccc;
+  margin: 0;
 }
 </style>
