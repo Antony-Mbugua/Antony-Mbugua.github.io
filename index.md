@@ -121,8 +121,8 @@ blockquote {
       <a href="https://cybershujaa.co.ke" target="_blank">Verify</a>
     </div>
     <div class="credential-badge">
-      <h3>Cisco CyberOps</h3>
-      <p>Security Fundamentals</p>
+      <h3>(ISC)2</h3>
+      <p>CC Cybersecurity</p>
       <a href="https://www.netacad.com" target="_blank">Verify</a>
     </div>
     <div class="credential-badge">
