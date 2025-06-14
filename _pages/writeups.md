@@ -6,6 +6,7 @@ collection: writeups
 entries_layout: grid
 classes: wide
 author_profile: true
+related: false
 ---
 
 ## 🛠️ Cybersecurity Writeups
