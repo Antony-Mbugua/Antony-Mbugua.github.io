@@ -20,7 +20,7 @@ Welcome to my curated collection of walkthroughs and CTF reports.
   {% for post in site.writeups %}
     <div class="writeup-card">
       <a href="{{ post.url | relative_url }}">
-        <img src="{{ post.image | default: '/assets/images/writeup-thumb.jpg' }}" alt="{{ post.title }}">
+        <img src="{{ post.image | default: '/assets/images/writeup-thumb.jpeg' }}" alt="{{ post.title }}">
         <div class="writeup-content">
           <h3>{{ post.title }}</h3>
           <p>{{ post.excerpt | markdownify | strip_html | truncate: 100 }}</p>
