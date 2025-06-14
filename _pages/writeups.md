@@ -8,12 +8,11 @@ author_profile: true
 
 ## 🛠️ Cybersecurity Writeups
 
-Welcome to my curated collection of hands-on walkthroughs from platforms like **TryHackMe**, **Hack The Box**, and **VulnHub**.
+Welcome to my curated collection of walkthroughs and CTF reports.
 
-Each card includes:
-- 🔍 Target Summary
-- 🧰 Tools Used
-- 📝 Step-by-Step Exploitation
+---
+
+{% include feature_row id="writeup_highlight" type="left" %}
 
 ---
 
