@@ -1,1 +1,19 @@
+writeup_highlight:
+  - image_path: assets/images/tryhackme-brute.png
+    alt: "Brute It"
+    title: "🧪 TryHackMe – Brute It"
+    excerpt: >
+      Used Hydra and Nmap to brute-force SSH login credentials on a target machine. Key takeaway: secure remote access with account lockout policies.
+    url: "/writeups/tryhackme-brute-it/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
+  - image_path: assets/images/htb-lame.png
+    alt: "HTB Lame"
+    title: "💣 Hack The Box – Lame"
+    excerpt: >
+      Exploited a vulnerable Samba version using Enum4linux and Metasploit. Gained root shell due to local misconfigurations. Lesson: patch management is crucial.
+    url: "/writeups/hackthebox-lame/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 
