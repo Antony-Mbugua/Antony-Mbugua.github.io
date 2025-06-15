@@ -20,18 +20,20 @@ tags: [tryhackme, brute-force, ssh, hydra]
 - Kali Linux machine
 
 ## 🧭 Steps
-1. **Started the target machine `10.10.34.33`**  
+Step 1. **Deployed the target machine `10.10.34.33`**
+   Deployed the target machine with IP 10.10.34.33
 
 
    ![Tarhet Machine](/assets/images/brute-it/target-machine.png)
 
-2. **Scanned target using `nmap -sS -sV  10.10.34.33`**  
+Step 2. **Performed an Nmap Scan `nmap -sS -sV  10.10.34.33`** 
+   -Ran nmap -sS -sV 10.10.34.33 to discover open ports and services.
    -This revealed two open ports, 22 and 80.
    -The SSH port was open on 22.
 
    ![Nmap Scan](/assets/images/brute-it/nmap.png)
 
-3. **Discovered;**  
+Step 3. **Discovered;**  
  -The version of SSH running is
    **OpenSSH 7.6p1**
 
@@ -44,20 +46,20 @@ tags: [tryhackme, brute-force, ssh, hydra]
    ![Ubuntu running](/assets/images/brute-it/ubuntu.png)
 
 
-4. **Searched for hidden directories on the web server.**  
+Step 4. **Searched for hidden directories on the web server.**  
   I used dirbuster command “dirsearch -u http://10.10.34.33”
 
    ![Dirsearch](/assets/images/brute-it/dirsearch.png)
 
    I discovered the hidden directory as **"/admin"**
 
-5. **Visited the port 80 of the target/admin**  
+Step 5. **Analyzed the Admin Login Page**  
    On the web browser, i visited http://10.10.34.3/admin. Amazing!. I got an admin login page.
 
    ![Admin](/assets/images/brute-it/hidden-admin-login-page.png)
 
 
-6. **Checked more details about the page on browser devtools**  
+Step 6. **Checked more details about the page on browser devtools**  
    By clicking F12 on my attack machine while on the page, I came across an interesting footprint.
    The username which was admin!! LOL
 
@@ -66,7 +68,7 @@ tags: [tryhackme, brute-force, ssh, hydra]
    ![Login leads](/assets/images/brute-it/User-login-info-devtools.png)
 
 
-7. **Ran Hydra to brute-force credentials**  
+Step 7. **Ran Hydra to brute-force credentials**  
    Used a common username/password list to brute-force SSH.
 
    I tried command "hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.34.33 http-post-form "/admin/:user=^USER^&pass=^PASS^login=^Login:Username or password invalid"" but the output was slow.
@@ -83,7 +85,7 @@ tags: [tryhackme, brute-force, ssh, hydra]
 
     ![Hydra Brute Force](/assets/images/brute-it/hydra1.png)
 
-8. **Gained shell access**  
+Step 8. **Gained shell access**  
    Logged in successfully and obtained user access to the system.
   
    Flag: THM{brut3_f0rce_is_e4sy}
