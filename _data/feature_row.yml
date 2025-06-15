@@ -6,9 +6,9 @@ writeup_highlight:
       Used Hydra and Nmap to brute-force SSH login credentials on a target machine...
     url: "/writeups/tryhackme-brute-it/"
 
-  - image_path: /assets/images/tryhackme-w1seguy.png
-    alt: "w1seguy Challenge"
-    title: "🔐 TryHackMe – w1seguy Challenge"
+  - image_path: /assets/images/w1seguy.png
+    alt: "w1seguy"
+    title: "🔐 TryHackMe – w1seguy"
     excerpt: >
       Walkthrough of the w1seguy challenge focusing on privilege escalation and user enumeration...
     url: "/writeups/tryhackme-w1seguy/"
