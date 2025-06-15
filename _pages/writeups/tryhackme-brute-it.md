@@ -150,6 +150,10 @@ root.txt
 THM{pr1v1l3g3_3sc4l4t10n}
 
 ![Root Password](/assets/images/brute-it/root-password.png)
+
+The root password is; football
+
+We have successfully completed this walkthrough. I really appreciated the support and effort offered by the Try Hack Me platform
  
 ## 📘 Lessons Learned
 - Account lockout policies are essential  
