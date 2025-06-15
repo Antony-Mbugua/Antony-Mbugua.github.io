@@ -52,12 +52,12 @@ tags: [tryhackme, brute-force, ssh, hydra]
    I discovered the hidden directory as **"/admin"**
 
 5. **Visited the port 80 of the target/admin**  
-   On the web browser, i visited http://10.10.34.3/admin. Amazing!. I got a an admin login page.
+   On the web browser, i visited http://10.10.34.3/admin. Amazing!. I got an admin login page.
 
    ![Admin](/assets/images/brute-it/hidden-admin-login-page.png)
 
 
-4. **Checked more details about the page on browser devtools**  
+6. **Checked more details about the page on browser devtools**  
    By clicking F12 on my attack machine while on the page, I came across an interesting footprint.
    The username which was admin!! LOL
 
@@ -66,7 +66,7 @@ tags: [tryhackme, brute-force, ssh, hydra]
    ![Login leads](/assets/images/brute-it/User-login-info-devtools.png)
 
 
-4. **Ran Hydra to brute-force credentials**  
+7. **Ran Hydra to brute-force credentials**  
    Used a common username/password list to brute-force SSH.
 
    I tried command "hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.34.33 http-post-form "/admin/:user=^USER^&pass=^PASS^login=^Login:Username or password invalid"" but the output was slow.
@@ -83,7 +83,7 @@ tags: [tryhackme, brute-force, ssh, hydra]
 
     ![Hydra Brute Force](/assets/images/brute-it/hydra1.png)
 
-6. **Gained shell access**  
+8. **Gained shell access**  
    Logged in successfully and obtained user access to the system.
   
    Flag: THM{brut3_f0rce_is_e4sy}
