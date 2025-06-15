@@ -149,7 +149,7 @@ I had saved the above root content as file.txt . I used the
 root.txt
 THM{pr1v1l3g3_3sc4l4t10n}
 
- !Root Password](/assets/images/brute-it/root-password.png)
+![Root Password](/assets/images/brute-it/root-password.png)
  
 ## 📘 Lessons Learned
 - Account lockout policies are essential  
