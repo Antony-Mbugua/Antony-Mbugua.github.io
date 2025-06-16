@@ -7,9 +7,9 @@
   ##  url: /about/
    ## icon: "fas fa-user"
 
- ## - title: "Writeups"
-  ##  url: /writeups/
-    ##icon: "fas fa-scroll"
+   - title: "Writeups"
+    url: /writeups/
+    icon: "fas fa-scroll"
 
    ## - title: "Talks"
     ## url: /talks/
