@@ -5,7 +5,10 @@ collection: writeups
 permalink: /writeups/tryhackme-brute-it/
 classes: wide
 tags: [tryhackme, brute-force, ssh, hydra]
+image: /assets/images/tryhackme-brute-it.png
+excerpt: "Brute-forced SSH using Hydra, cracked RSA key with John the Ripper, and escalated to root on an Ubuntu machine."
 ---
+
 
 ![Brute It Screenshot](/assets/images/tryhackme-brute-it.png)
 
