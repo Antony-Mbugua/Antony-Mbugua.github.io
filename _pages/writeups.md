@@ -13,7 +13,7 @@ Welcome to my curated collection of walkthroughs and CTF reports.
 ---
 
 <div class="chirpy-writeup-grid">
-  {% assign writeups = site.writeups | sort: 'title' %}
+  {% assign writeups = site.writeups | sort: 'date' | reverse %}
   {% for post in writeups %}
     <article class="chirpy-post-card">
       <a href="{{ post.url | relative_url }}">
