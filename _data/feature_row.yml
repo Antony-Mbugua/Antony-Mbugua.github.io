@@ -20,30 +20,30 @@ writeup_highlight:
       Exploited an old Apache vulnerability to gain root on the Kioptrix Level 1 virtual machine from VulnHub...
     url: "/writeups/vulnhub-kioptrix1/"
     
-  - image_path: /assets/images/vulnhub-kioptrix2.jpeg
+  - image_path: /assets/images/vulnhub-kioptrix2.jpg
     alt: "Kioptrix Level 2"
-    title: "🧩 Kioptrix Level 2"
+    title: "🧩 VulnHub – Kioptrix Level 2"
     excerpt: >
       Used SMB enumeration and a local file inclusion vulnerability to escalate privileges.
     url: "/writeups/kioptrix-level-2/"
 
-  - image_path: /assets/images/vulnhub-kioptrix3.jpeg
+  - image_path: /assets/images/vulnhub-kioptrix3.jpg
     alt: "Kioptrix Level 3"
-    title: "🧩 Kioptrix Level 3"
+    title: "🧩 VulnHub – Kioptrix Level 3"
     excerpt: >
       Combined SQL injection and local privilege escalation to achieve root access.
     url: "/writeups/kioptrix-level-3/"
 
   - image_path: /assets/images/vulnhub-kioptrix4.png
     alt: "Kioptrix Level 4"
-    title: "🧩 Kioptrix Level 4"
+    title: "🧩 VulnHub – Kioptrix Level 4"
     excerpt: >
       Performed advanced Linux enumeration and used SUID abuse to escalate to root.
     url: "/writeups/kioptrix-level-4/"
 
-  - image_path: /assets/images/vulnhub-kioptrix5.jpeg
+  - image_path: /assets/images/vulnhub-kioptrix5.jpg
     alt: "Kioptrix Level 5"
-    title: "🧩 Kioptrix Level 5"
+    title: "🧩 VulnHub – Kioptrix Level 5"
     excerpt: >
       Full penetration test including network scanning, web exploitation, and kernel exploit.
     url: "/writeups/kioptrix-level-5/"
