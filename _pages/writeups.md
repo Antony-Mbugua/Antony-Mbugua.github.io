@@ -13,16 +13,16 @@ Welcome to my curated collection of walkthroughs and CTF reports.
 ---
 
 <div class="chirpy-writeup-grid">
-  {% assign writeups = site.data.feature_row.writeup_highlight %}
-  {% for item in writeups %}
+  {% assign writeups = site.writeups | sort: 'title' %}
+  {% for post in writeups %}
     <article class="chirpy-post-card">
-      <a href="{{ item.url | relative_url }}">
+      <a href="{{ post.url | relative_url }}">
         <div class="chirpy-thumbnail">
-          <img src="{{ item.image_path | relative_url }}" alt="{{ item.alt }}">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
         </div>
         <div class="chirpy-post-content">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.excerpt | strip_html | truncate: 140 }}</p>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
         </div>
       </a>
     </article>
