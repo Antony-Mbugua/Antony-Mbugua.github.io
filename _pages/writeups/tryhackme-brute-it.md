@@ -1,5 +1,5 @@
 ---
-title: "TryHackMe – Brute It"
+title: "🧪 TryHackMe – Brute It"
 layout: single
 collection: writeups
 permalink: /writeups/tryhackme-brute-it/
