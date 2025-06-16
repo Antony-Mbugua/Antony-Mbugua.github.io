@@ -19,7 +19,8 @@ writeup_highlight:
     excerpt: >
       Exploited an old Apache vulnerability to gain root on the Kioptrix Level 1 virtual machine from VulnHub...
     url: "/writeups/vulnhub-kioptrix1/"
-- image_path: /assets/images/vulnhub-kioptrix2.jpeg
+    
+  - image_path: /assets/images/vulnhub-kioptrix2.jpeg
     alt: "Kioptrix Level 2"
     title: "🧩 Kioptrix Level 2"
     excerpt: >
