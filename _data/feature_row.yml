@@ -1,10 +1,10 @@
 writeup_highlight:
-  - image_path: /assets/images/tryhackme-brute-it.png
-    alt: "Brute It"
-    title: "🧪 TryHackMe – Brute It"
-    excerpt: >
-      Used Hydra and Nmap to brute-force SSH login credentials on a target machine...
-    url: "/writeups/tryhackme-brute-it/"
+  ##- image_path: /assets/images/tryhackme-brute-it.png
+    ##alt: "Brute It"
+    ##title: "🧪 TryHackMe – Brute It"
+    ##excerpt: >
+      ##Used Hydra and Nmap to brute-force SSH login credentials on a target machine...
+   ## url: "/writeups/tryhackme-brute-it/"
 
   - image_path: /assets/images/w1seguy.png
     alt: "w1seguy"
