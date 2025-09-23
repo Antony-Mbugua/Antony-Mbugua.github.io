@@ -63,7 +63,7 @@ pageviews:
   provider:
 
 # Theme color
-theme_mode: preferred_color_scheme
+theme_mode: [light | dark]
 
 # CDN (if any)
 cdn:
