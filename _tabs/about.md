@@ -14,7 +14,7 @@ I love breaking and securing systems — from hardening apps to writing technica
 ## 📍 Snapshot
 - 🌍 Location: **Nairobi, Kenya**  
 - 📧 [antonymbugua742@gmail.com](mailto:antonymbugua742@gmail.com)  
-- 💻 [GitHub](https://github.com/Antony-Mbugua) | [LinkedIn](www.linkedin.com/in/antony-mbugua)  
+- 💻 [GitHub](https://github.com/Antony-Mbugua) | [LinkedIn](https://www.linkedin.com/in/antony-mbugua)  
 
 ---
 
