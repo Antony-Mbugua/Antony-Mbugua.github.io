@@ -48,7 +48,7 @@ Here are a few highlights (see the [Projects page](/projects) for full details):
 ---
 
 ## 📄 Resume
-👉 [**Download My Resume (PDF)**](/assets/files/Antony_Mbugua_Resume.pdf)  
+👉 [**Download My Resume (PDF)**](/assets/files/Antony_Mbugua_CV.pdf)  
 
 ---
 
