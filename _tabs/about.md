@@ -57,5 +57,5 @@ Have feedback on my projects?
 Got a collaboration idea?  
 Leave a comment below 👇 — powered by Giscus.  
 
-{{ include_relative _includes/giscus.html }}
+{% include_relative giscus.html %}
 >
