@@ -21,14 +21,14 @@ url: "https://antony-mbugua.github.io"
 github:
   username: Antony-Mbugua
 
-twitter:
-  username: AntonyMbugua
+X:
+  username: Antony-Mbugua
 
 social:
   name: Antony Mbugua Githinji
   email: antonymbugua742@gmail.com
   links:
-    - https://twitter.com/AntonyMbugua
+    - https://x.com/AntonyMbugua
     - https://github.com/Antony-Mbugua
     - https://www.linkedin.com/in/antonymbugua
 
@@ -63,7 +63,7 @@ pageviews:
   provider:
 
 # Theme color
-theme_mode: light
+theme_mode: preferred_color_scheme
 
 # CDN (if any)
 cdn:
