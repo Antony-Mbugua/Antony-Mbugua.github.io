@@ -10,8 +10,7 @@ order: 3
       {% if post.image %}
         <img src="{{ post.image }}" alt="{{ post.title }}">
       {% else %}
-        <!-- fallback avatar -->
-        <img src="/assets/images/default-writeup.png" alt="Default avatar">
+        <img src="/assets/images/default-writeup.png" alt="Default image">
       {% endif %}
     </div>
     <div class="card-content">
@@ -25,50 +24,44 @@ order: 3
 <style>
 .writeups-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
   margin-top: 30px;
 }
 
 .writeup-card {
   display: flex;
-  align-items: center;
+  flex-direction: column; /* image on top, text below */
   background: white;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  padding: 15px;
+  overflow: hidden; /* keeps image inside card */
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  gap: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .writeup-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .card-image {
-  width: 80px;
-  height: 80px;
-  flex-shrink: 0;
-  border-radius: 50%; /* profile look */
+  width: 100%;
+  height: 180px; /* fixed banner-style height */
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f0f0f0; /* fallback bg */
 }
 
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fill nicely */
+  object-fit: cover; /* fills without distortion */
 }
 
 .card-content {
-  flex: 1;
+  padding: 15px;
+  text-align: left;
 }
 
 .card-content h3 {
@@ -84,3 +77,4 @@ order: 3
   line-height: 1.4;
 }
 </style>
+
