@@ -6,12 +6,14 @@ order: 4
 
 # 👋 Hello, I’m Antony Mbugua Githinji  
 
-🚀 **Cybersecurity Enthusiast & Applied Computing Final-Year Student**  
-I love breaking and securing systems — from hardening apps to writing technical walkthroughs that simplify complex security concepts.  
+🚀 **Cybersecurity Specialist | Applied Computing Professional**  
+I design and secure systems with a focus on resilience, scalability, and trust. My work bridges **software development and cybersecurity** — from building production-grade transport management platforms to applying advanced security practices like **MFA, SIEM logging, encryption, and system hardening**.  
+I’m passionate about solving real-world security challenges and simplifying complex concepts into practical, actionable solutions.  
 
 ---
 
 ## 📍 Snapshot
+- 🎓 Background: **Applied Computing (Information Security & Forensics)**  
 - 🌍 Location: **Nairobi, Kenya**  
 - 📧 [antonymbugua742@gmail.com](mailto:antonymbugua742@gmail.com)  
 - 💻 [GitHub](https://github.com/Antony-Mbugua) | [LinkedIn](https://www.linkedin.com/in/antony-mbugua)  
@@ -19,54 +21,46 @@ I love breaking and securing systems — from hardening apps to writing technica
 ---
 
 ## 🛠 Skills at a Glance
-**Web Development**  
-- ⚡ React, Next.js, Vite  
-- ⚡ Laravel (API & full-stack)  
 
 **Cybersecurity**  
-- 🔒 Vulnerability assessment  
-- 🔒 System hardening & basic forensics  
-- 🔒 SIEM logging & monitoring  
+- 🔒 Vulnerability assessment & penetration testing  
+- 🔒 Secure authentication (MFA, ZTA principles)  
+- 🔒 SIEM logging & monitoring (log management & analysis)  
+- 🔒 Encryption (AES-256, key rotation)  
+- 🔒 Digital forensics fundamentals  
 
-**Tools**  
-- 🐳 Docker 
-- 🛢 MySQL  
-- 📑 Tesseract.js  
-- 🔧 Git & GitHub  
+**Software Development**  
+- ⚡ React, Next.js, Vite (frontend)  
+- ⚡ Laravel & Node.js/Express (backend, API development)  
+- ⚡ MySQL database design & management  
+
+**Systems & Tools**  
+- ☁️ Cloud & network security (Cyber Shujaa program training)  
+- 🐳 Docker & containerization  
+- 📑 OCR (Tesseract.js)  
+- 🔧 Git, GitHub, CI/CD workflows  
 
 ---
 
 ## 🚀 Projects & Experience
-Here are a few highlights (see the [Projects page](/projects) for full details):  
+Highlights from my recent work (see the [Projects page](/projects) for full details):  
 
-- 🛡 **All Over Logistics TMS** – A production-ready trucking management system (React + MySQL + secure auth).  
-- 🔍 **HackTheBox & TryHackMe Writeups** – Step-by-step cybersecurity challenges and solutions.  
-- ⚙️ **Nextcloud Self-Hosted Drive** – A private cloud built for secure internal file sharing.  
+- 🛡 **All Over Logistics TMS** – Production-ready trucking management system with secure authentication, expense tracking, OCR for document handling, and SIEM logging.  
+- 🔍 **HackTheBox & TryHackMe Writeups** – Practical walkthroughs demonstrating problem-solving and exploit methodology.  
+- ☁️ **Nextcloud Self-Hosted Drive** – Secure, internal file-sharing cloud platform.  
 
 ---
 
 ## 📄 Resume
-👉 [**View My Resume (PDF)**](/assets/files/Antony_Mbugua_CV.pdf){:target="_blank"}  
-<embed src="/assets/files/Antony_Mbugua_CV.pdf" width="100%" height="600px" type="application/pdf">
+👉 [**Download My Resume (PDF)**](/assets/files/Antony_Mbugua_CV.pdf){:target="_blank"}  
+
+<iframe src="/assets/files/Antony_Mbugua_CV.pdf" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
 
 ---
 
-## 💬 Let’s Talk
-Have feedback on my projects?  
-Got a collaboration idea?  
+## 💬 Let’s Connect
+Have feedback on my projects? Want to collaborate?  
 
-<div class="comments">
-  <!-- Giscus embed -->
-  <script src="https://giscus.app/client.js"
-        data-repo="Antony-Mbugua/antony-mbugua.github.io"
-        data-repo-id="YOUR_REPO_ID"
-        data-category="General"
-        data-category-id="YOUR_CATEGORY_ID"
-        data-mapping="pathname"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-theme="preferred_color_scheme"
-        crossorigin="anonymous"
-        async>
-  </script>
-</div>
+💡 Share your thoughts below — I welcome comments, reactions, and new ideas.  
+
+{% include comments.html %}
