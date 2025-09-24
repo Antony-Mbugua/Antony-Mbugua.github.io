@@ -14,7 +14,6 @@ order: 3
       <div class="post-card-body">
         <h3 class="post-card-title">{{ post.title }}</h3>
         <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 80 }}</p>
-        <span class="post-card-link">Read More →</span>
       </div>
     </a>
   {% endfor %}
@@ -23,9 +22,9 @@ order: 3
 <style>
 .post-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .post-card {
@@ -34,48 +33,45 @@ order: 3
   background: var(--card-bg, #1e1e1e);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  max-height: 300px;
 }
 
 .post-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
 
 .post-card-image img {
   width: 100%;
-  height: 140px; /* compact image */
+  height: 150px; /* fixed height for uniformity */
   object-fit: cover;
   display: block;
 }
 
 .post-card-body {
-  padding: 0.6rem 0.9rem;
-  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .post-card-title {
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
   color: var(--heading-color, #fff);
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .post-card-excerpt {
-  font-size: 0.8rem;
-  line-height: 1.3;
-  color: var(--text-color, #bbb);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text-color, #aaa);
   margin-bottom: 0.4rem;
 }
-
-.post-card-link {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #4da6ff;
-}
 </style>
+
