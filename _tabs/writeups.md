@@ -7,7 +7,12 @@ order: 3
   {% for post in site.categories.Writeups %}
   <a href="{{ post.url }}" class="writeup-card">
     <div class="card-image">
-      <img src="{{ post.image }}" alt="{{ post.title }}">
+      {% if post.image %}
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+      {% else %}
+        <!-- fallback avatar -->
+        <img src="/assets/images/default-writeup.png" alt="Default avatar">
+      {% endif %}
     </div>
     <div class="card-content">
       <h3>{{ post.title }}</h3>
@@ -30,7 +35,7 @@ order: 3
   align-items: center;
   background: white;
   border: 1px solid #e0e0e0;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 15px;
   text-decoration: none;
   color: inherit;
@@ -48,14 +53,18 @@ order: 3
   width: 80px;
   height: 80px;
   flex-shrink: 0;
-  border-radius: 8px;
+  border-radius: 50%; /* profile look */
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0; /* fallback bg */
 }
 
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* fill nicely */
 }
 
 .card-content {
