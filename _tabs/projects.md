@@ -17,7 +17,7 @@ order: 5
           {% if post.image %}
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
           {% else %}
-            <img src="/assets/img/default-project.png" alt="default image">
+            <img src="/assets/images/default-project.png" alt="default image">
           {% endif %}
           <h3>{{ post.title }}</h3>
         </a>
