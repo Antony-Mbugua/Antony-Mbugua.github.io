@@ -7,16 +7,25 @@ order: 3
 # 🔐 Writeups  
 
 <div class="grid-container">
-{% assign writeups = site.posts | where_exp:"p","p.categories contains 'writeup'" %}
-{% for post in writeups %}
-  <div class="card">
-    <a href="{{ post.url | relative_url }}">
-      <img src="{{ post.image }}" alt="{{ post.title }}">
-      <h3>{{ post.title }}</h3>
-    </a>
-  </div>
-{% endfor %}
+  {% assign writeups = site.posts | where_exp:"p","p.categories contains 'writeup'" %}
+  {% if writeups.size > 0 %}
+    {% for post in writeups %}
+      <div class="card">
+        <a href="{{ post.url | relative_url }}">
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+          {% else %}
+            <img src="/assets/images/default-writeup.png" alt="default image">
+          {% endif %}
+          <h3>{{ post.title }}</h3>
+        </a>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No writeups available yet.</p>
+  {% endif %}
 </div>
+
 
 <style>
 .grid-container {
