@@ -6,50 +6,40 @@ order: 5
 ---
 
 
-<div class="cards-grid">
-  {% for project in site.projects %}
-    <div class="card">
-      {% if project.image %}
-        <div class="card-image">
-          <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
-        </div>
-      {% endif %}
-      <div class="card-content">
-        <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
-        <p>{{ project.excerpt | strip_html | truncate: 120 }}</p>
-      </div>
-    </div>
-  {% endfor %}
+# 🚀 Projects  
+
+<div class="grid-container">
+{% assign projects = site.posts | where_exp:"p","p.categories contains 'project'" %}
+{% for post in projects %}
+  <div class="card">
+    <a href="{{ post.url | relative_url }}">
+      <img src="{{ post.image }}" alt="{{ post.title }}">
+      <h3>{{ post.title }}</h3>
+    </a>
+  </div>
+{% endfor %}
 </div>
 
 <style>
-.cards-grid {
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.2rem;
 }
 .card {
-  border: 1px solid var(--border-color);
+  background: var(--card-bg);
   border-radius: 12px;
-  overflow: hidden;
-  background: var(--bg);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
 }
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-.card-image img {
+.card:hover { transform: scale(1.03); }
+.card img {
   width: 100%;
   height: 160px;
   object-fit: cover;
-}
-.card-content {
-  padding: 1rem;
-}
-.card-content h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
+  border-radius: 8px;
+  margin-bottom: .5rem;
 }
 </style>
