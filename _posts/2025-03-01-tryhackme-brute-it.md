@@ -4,7 +4,7 @@ layout: post
 collection: writeups
 permalink: /writeups/tryhackme-brute-it/
 date: 2025-01-10
-categories: [project]
+categories: [Writeups]
 tags: [react, mysql, logistics]
 image: /assets/images/writeups/brute-it/tryhackme-brute-it.png
 thumbnail: /assets/images/writeups/brute-it/tryhackme-brute-it.png
@@ -128,4 +128,5 @@ Root flag: `THM{pr1v1l3g3_3sc4l4t10n}`
 ## Notes / Artifacts
 - Commands used and screenshots are included above.  
 - Sanitize any client screenshots before publishing publicly.
+
 
