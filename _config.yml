@@ -10,7 +10,7 @@ lang: en
 timezone: Africa/Nairobi
 
 # Site info
-title: Antony Mbugua
+title: Antony Mbugua Githinji
 tagline: Cybersecurity & IT Projects Portfolio
 description: >-
   Portfolio showcasing cybersecurity projects, writeups, and IT solutions.
@@ -138,6 +138,19 @@ collections:
   tabs:
     output: true
     sort_by: order
+
+  projects:
+    output: true
+    permalink: /:collection/:name/
+    sort_by: date
+
+  writeups:
+    output: true
+    permalink: /:collection/:name/
+    sort_by: date
+    categories: true
+    tags: true
+
 
 defaults:
   - scope:
