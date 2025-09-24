@@ -11,7 +11,7 @@ order: 3
     </div>
     <div class="card-content">
       <h3>{{ post.title }}</h3>
-      <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+      <p>{{ post.excerpt | strip_html | truncate: 80 }}</p>
     </div>
   </a>
   {% endfor %}
@@ -26,24 +26,29 @@ order: 3
 }
 
 .writeup-card {
-  display: block;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  gap: 15px;
 }
 
 .writeup-card:hover {
   transform: translateY(-2px);
-  text-decoration: none;
-  color: inherit;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .card-image {
-  width: 100%;
-  height: 160px;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -54,17 +59,19 @@ order: 3
 }
 
 .card-content {
-  padding: 15px;
+  flex: 1;
 }
 
 .card-content h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.2em;
+  margin: 0 0 8px 0;
+  font-size: 1.1em;
+  color: #333;
 }
 
 .card-content p {
   margin: 0;
   color: #666;
   font-size: 0.9em;
+  line-height: 1.4;
 }
 </style>
