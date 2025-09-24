@@ -9,16 +9,25 @@ order: 5
 # 🚀 Projects  
 
 <div class="grid-container">
-{% assign projects = site.posts | where_exp:"p","p.categories contains 'project'" %}
-{% for post in projects %}
-  <div class="card">
-    <a href="{{ post.url | relative_url }}">
-      <img src="{{ post.image }}" alt="{{ post.title }}">
-      <h3>{{ post.title }}</h3>
-    </a>
-  </div>
-{% endfor %}
+  {% assign projects = site.posts | where_exp:"p","p.categories contains 'project'" %}
+  {% if projects.size > 0 %}
+    {% for post in projects %}
+      <div class="card">
+        <a href="{{ post.url | relative_url }}">
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+          {% else %}
+            <img src="/assets/img/default-project.png" alt="default image">
+          {% endif %}
+          <h3>{{ post.title }}</h3>
+        </a>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No projects yet. Stay tuned!</p>
+  {% endif %}
 </div>
+
 
 <style>
 .grid-container {
