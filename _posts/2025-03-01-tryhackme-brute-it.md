@@ -3,14 +3,14 @@ title: "🧪 TryHackMe – Brute It"
 layout: post
 collection: writeups
 permalink: /writeups/tryhackme-brute-it/
-categories: [EH]
-tags: []
+date: 2025-01-10
+categories: [project]
+tags: [react, mysql, logistics]
 image: /assets/images/writeups/brute-it/tryhackme-brute-it.png
 thumbnail: /assets/images/writeups/brute-it/tryhackme-brute-it.png
 icon: fas fa-bolt
 excerpt: "Brute-forced SSH using Hydra, cracked RSA key with John the Ripper, and escalated to root on an Ubuntu machine."
 description: "Hydra brute-force against an admin panel, SSH key crack with john, and privilege escalation on an Ubuntu machine."
-date: 2025-09-20
 ---
 
 
@@ -128,3 +128,4 @@ Root flag: `THM{pr1v1l3g3_3sc4l4t10n}`
 ## Notes / Artifacts
 - Commands used and screenshots are included above.  
 - Sanitize any client screenshots before publishing publicly.
+
