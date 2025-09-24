@@ -6,7 +6,7 @@ order: 3
 
 <div class="grid-container">
   {%- assign writeups = site.posts | where_exp: "p",
-       "p.category == 'writeup' or p.category == 'writeups' or p.categories contains 'writeup' or p.categories contains 'writeups'" -%}
+       "p.category == 'Writeup' or p.category == 'Writeups' or p.categories contains 'Writeup' or p.categories contains 'Writeups'" -%}
 
   {%- if writeups.size > 0 -%}
     {%- for post in writeups -%}
