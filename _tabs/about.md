@@ -15,8 +15,8 @@ I’m passionate about solving real-world security challenges and simplifying co
 ## 📍 Snapshot
 - 🎓 Background: **Applied Computing (Information Security & Forensics)**  
 - 🌍 Location: **Nairobi, Kenya**  
-- 📧 [antonymbugua742@gmail.com](mailto:antonymbugua742@gmail.com)  
-- 💻 [GitHub](https://github.com/Antony-Mbugua) | [LinkedIn](https://www.linkedin.com/in/antony-mbugua)  
+- 📧 [antonymbugua742@gmail.com](mailto:antonymbugua742@gmail.com){:target="_blank" rel="noopener noreferrer"}  
+- 💻 [GitHub](https://github.com/Antony-Mbugua){:target="_blank" rel="noopener noreferrer"} | [LinkedIn](https://www.linkedin.com/in/antony-mbugua){:target="_blank" rel="noopener noreferrer"}  
 
 ---
 
@@ -43,7 +43,7 @@ I’m passionate about solving real-world security challenges and simplifying co
 ---
 
 ## 🚀 Projects & Experience
-Highlights from my recent work (see the [Projects page](/projects) for full details):  
+Highlights from my recent work (see the [Projects page](/projects){:target="_blank" rel="noopener noreferrer"} for full details):  
 
 - 🛡 **All Over Logistics TMS** – Production-ready trucking management system with secure authentication, expense tracking, OCR for document handling, and SIEM logging.  
 - 🔍 **HackTheBox & TryHackMe Writeups** – Practical walkthroughs demonstrating problem-solving and exploit methodology.  
@@ -52,9 +52,14 @@ Highlights from my recent work (see the [Projects page](/projects) for full deta
 ---
 
 ## 📄 Resume
-👉 [**Download My Resume (PDF)**](/assets/files/Antony_Mbugua_CV.pdf){:target="_blank"}  
+👉 [**Download My Resume (PDF)**](/assets/files/Antony_Mbugua_CV.pdf){:target="_blank" rel="noopener noreferrer" class="btn btn-primary"}
 
-<iframe src="/assets/files/Antony_Mbugua_CV.pdf" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
+<div style="position:relative; padding-bottom:75%; height:0; overflow:hidden; margin-top:1rem;">
+  <iframe src="/assets/files/Antony_Mbugua_CV.pdf" 
+          style="position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #ccc;" 
+          allowfullscreen>
+  </iframe>
+</div>
 
 ---
 
@@ -64,3 +69,18 @@ Have feedback on my projects? Want to collaborate?
 💡 Share your thoughts below — I welcome comments, reactions, and new ideas.  
 
 {% include comments.html %}
+
+---
+
+<!-- Optional JS snippet for auto new-tab on all external links -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll("a[href]");
+  links.forEach(link => {
+    if(!link.href.includes(window.location.hostname)) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    }
+  });
+});
+</script>
