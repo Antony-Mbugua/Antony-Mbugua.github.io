@@ -4,17 +4,15 @@ order: 3
 ---
 
 <div class="writeups-grid">
-  {% for post in site.categories.Writeups %}
+  {% assign writeups = site.categories.Writeups | sort: 'date' | reverse %}
+  {% for post in writeups %}
   <a href="{{ post.url }}" class="writeup-card">
-    <div class="card-image">
-      {% if post.image %}
-        <img src="{{ post.image }}" alt="{{ post.title }}">
-      {% else %}
-        <img src="/assets/images/default-writeup.png" alt="Default image">
-      {% endif %}
+    <div class="card-image" style="background-image: url({% if post.image %}{{ post.image }}{% else %}/assets/images/default-writeup.png{% endif %});">
+      <div class="card-title-overlay">
+        <h3>{{ post.title }}</h3>
+      </div>
     </div>
     <div class="card-content">
-      <h3>{{ post.title }}</h3>
       <p>{{ post.excerpt | strip_html | truncate: 80 }}</p>
     </div>
   </a>
@@ -31,11 +29,11 @@ order: 3
 
 .writeup-card {
   display: flex;
-  flex-direction: column; /* image on top, text below */
+  flex-direction: column;
   background: white;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  overflow: hidden; /* keeps image inside card */
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -49,25 +47,29 @@ order: 3
 
 .card-image {
   width: 100%;
-  height: 180px; /* fixed banner-style height */
-  overflow: hidden;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* pushes title to bottom */
 }
 
-.card-image img {
+.card-title-overlay {
+  background: rgba(0, 0, 0, 0.55); /* semi-transparent overlay */
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* fills without distortion */
+  padding: 8px 12px;
+}
+
+.card-title-overlay h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #fff; /* ensures title is visible */
 }
 
 .card-content {
   padding: 15px;
   text-align: left;
-}
-
-.card-content h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.1em;
-  color: #333;
 }
 
 .card-content p {
@@ -77,4 +79,3 @@ order: 3
   line-height: 1.4;
 }
 </style>
-
