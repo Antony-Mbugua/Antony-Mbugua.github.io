@@ -20,7 +20,6 @@ description: "Exploit of server trusting client-supplied X-Forwarded-For/X-Real-
 ## Challenge Overview
 
 * **Challenge Name:** Real IP Heist
-* **Difficulty:** 50 points
 * **Target URL:** `http://54.72.82.22:8085`
 * **Description:** "Ever wonder what your network really reveals about you. Not everything is as anonymous as it seems..."
 
@@ -132,5 +131,5 @@ safctf{c0f1ec1fccb2de4a03031037251f21a7}
 
 ## Notes
 
-* All testing described here was performed in the context of the CTF challenge as provided by the target URL.
-* Use the documented curl commands for reproducibility and reporting.
+* All testing described above was performed in the context of the CTF challenge as provided by the target URL.
+
