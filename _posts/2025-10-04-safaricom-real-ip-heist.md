@@ -6,8 +6,8 @@ permalink: /writeups/safaricom-real-ip-heist/
 date: 2025-10-04
 categories: [Writeups]
 tags: [web, headers, pwnzone]
-image: /assets/images/writeups/real-ip-heist/safaricom-real-ip-heist.png
-thumbnail: /assets/images/writeups/real-ip-heist/safaricom-real-ip-heist.png
+image: /assets/images/writeups/real-ip-heist/safaricom-real-ip-heist.jpg
+thumbnail: /assets/images/writeups/real-ip-heist/safaricom-real-ip-heist.jpg
 icon: fas fa-network-wired
 excerpt: "Abused trust in X-Forwarded-For / X-Real-IP headers to escalate access and retrieve the flag."
 description: "Exploit of server trusting client-supplied X-Forwarded-For/X-Real-IP headers, obtaining Admin access and the flag."
