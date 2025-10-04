@@ -1,10 +1,10 @@
 ---
-title: "🔓 Safaricom PwnZone – Real IP Heist"
+title: "🔓 Real IP Heist"
 layout: post
 collection: writeups
 permalink: /writeups/safaricom-real-ip-heist/
 date: 2025-10-04
-categories: [Writeups]
+categories: [Safaricom PwnZone]
 tags: [web, headers, pwnzone]
 image: /assets/images/writeups/real-ip-heist/safaricom-real-ip-heist.jpg
 thumbnail: /assets/images/writeups/real-ip-heist/safaricom-real-ip-heist.jpg
