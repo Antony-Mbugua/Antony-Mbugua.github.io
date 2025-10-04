@@ -1,4 +1,5 @@
-title: "🧪 Safaricom PwnZone – Real IP Heist"
+---
+title: "🔓 Safaricom PwnZone – Real IP Heist"
 layout: post
 collection: writeups
 permalink: /writeups/safaricom-real-ip-heist/
