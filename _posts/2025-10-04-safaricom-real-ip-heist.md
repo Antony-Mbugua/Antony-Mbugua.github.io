@@ -44,6 +44,8 @@ Inspected the page source and network activity using browser developer tools. Di
 
 ![Page Source Screenshot](/assets/images/writeups/real-ip-heist/View-Page-Source.png)
 
+![Source Code Screenshot](/assets/images/writeups/real-ip-heist/Source-code.png)
+
 ### 3. Bypassing Client-Side Restrictions
 
 The server appeared to trust HTTP headers for IP verification. I bypassed client-side restrictions using `curl` to send custom requests with spoofed headers.
