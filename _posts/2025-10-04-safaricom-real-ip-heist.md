@@ -13,7 +13,7 @@ excerpt: "Abused trust in X-Forwarded-For / X-Real-IP headers to escalate access
 description: "Exploit of server trusting client-supplied X-Forwarded-For/X-Real-IP headers, obtaining Admin access and the flag."
 ---
 
-![Real IP Heist Screenshot](/assets/images/writeups/real-ip-heist/safaricom-real-ip-heist.png)
+![Real IP Heist Screenshot](/assets/images/writeups/real-ip-heist/safaricom-real-ip-heist.jpg)
 
 # Real IP Heist — Safaricom PwnZone
 
