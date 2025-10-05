@@ -1,5 +1,4 @@
 ---
-
 title: "Kioptrix Level 1 Walkthrough"
 layout: post
 collection: writeups
@@ -12,7 +11,7 @@ thumbnail: /assets/images/writeups/kioptrix1/kioptrix-1.jpg
 icon: fas fa-server
 excerpt: "Exploiting an outdated Samba service using Metasploit to gain root access on Kioptrix Level 1."
 description: "Walkthrough of Kioptrix Level 1 VM penetration test, covering reconnaissance, vulnerability identification, and exploitation via Samba trans2open overflow."
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 # Kioptrix Level 1 — Walkthrough
 
