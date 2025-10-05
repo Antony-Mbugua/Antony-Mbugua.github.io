@@ -3,7 +3,7 @@ title: "Kioptrix Level 1 Walkthrough"
 layout: post
 collection: writeups
 permalink: /writeups/kioptrix-level1/
-date: 2025-10-05
+date: 2025-01-09
 categories: ["Writeups", "VulnHub"]
 tags: [pentest, samba, trans2open, metasploit, reverse-shell]
 image: /assets/images/writeups/kioptrix1/kioptrix-1.jpg
