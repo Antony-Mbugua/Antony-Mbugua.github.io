@@ -35,7 +35,7 @@ Tools used: `netdiscover`, `arp-scan`.
 * MAC address: `08:00:27:39:c3:0d` (VirtualBox).
 
 ![Netdiscover Scan](/assets/images/writeups/kioptrix1/netdiscover.png)
-![ARP Scan](/assets/images/writeups/kioptrix1/arp-scan-l.png)
+![ARP Scan](/assets/images/writeups/kioptrix1/arp-scan.png)
 
 ### Port scanning
 
