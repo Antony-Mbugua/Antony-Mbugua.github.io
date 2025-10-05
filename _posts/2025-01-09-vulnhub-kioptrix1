@@ -13,6 +13,8 @@ excerpt: "Exploiting an outdated Samba service using Metasploit to gain root acc
 description: "Walkthrough of Kioptrix Level 1 VM penetration test, covering reconnaissance, vulnerability identification, and exploitation via Samba trans2open overflow."
 ---
 
+
+
 # Kioptrix Level 1 — Walkthrough
 
 ## Introduction
