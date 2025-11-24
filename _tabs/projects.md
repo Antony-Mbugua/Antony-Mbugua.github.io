@@ -7,6 +7,35 @@ order: 5
 
 # 🚀 Projects  
 
+Below are some of the major systems I have developed. These appear *before* the auto-generated project cards to ensure the most important projects are always visible.
+
+---
+
+## ⭐ Featured Projects  
+
+### 🔹 All Over Logistics – Transport Management System  
+**Website:** [alloverlogistics.com](https://alloverlogistics.com)  
+A production-ready TMS built for a U.S.–based carrier. Includes load creation, document uploads, OCR (Tesseract.js), driver app sync, expenses, invoices, secure authentication, and complete workflow automation.  
+**Tech:** React, Laravel/Node (varied versions), MySQL, Tailwind, Hostinger Cloud  
+
+---
+
+### 🔹 277 Logistics – Transport Management System  
+**Website:** [277logistics.com](https://277logistics.com)  
+A customized TMS built for another mid-sized trucking company. Includes dispatcher dashboard, broker credit checks, automated invoice creation, and a streamlined operational workflow.  
+**Tech:** React, MySQL, Node/Laravel, Tailwind  
+
+---
+
+### 🔹 Pairing System – Automatic Runs & Pair Generator  
+**Website:** [tech-realm.top](https://tech-realm.top)  
+A smart pairing system that automatically generates daily/weekly pairs or runs for groups, teams, or organizations. Includes admin controls and a clean UI.  
+**Tech:** PHP / Laravel, MySQL, JavaScript, Tailwind  
+
+---
+
+# 📁 Additional Project Posts  
+
 <div class="projects-grid">
   {% assign projects = site.posts | where_exp:"p","p.categories contains 'project'" | sort: 'date' | reverse %}
   {% if projects.size > 0 %}
@@ -23,7 +52,7 @@ order: 5
       </a>
     {% endfor %}
   {% else %}
-    <p>No projects yet. Stay tuned!</p>
+    <p>No project posts yet. Stay tuned!</p>
   {% endif %}
 </div>
 
