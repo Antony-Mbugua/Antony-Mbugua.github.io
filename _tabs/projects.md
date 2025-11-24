@@ -11,11 +11,11 @@ Explore some of my major systems, built with real-world applications in logistic
 
 <div class="projects-grid">
   {% for project in site.data.projects %}
-    <a href="{{ project.url }}" target="_blank" class="project-card">
+    <div class="project-card">
       <div class="project-image-wrapper">
-        <div class="project-image" style="background-image: url({{ project.image }});"></div>
+        <div class="project-image" style="background-image: url({{ project.image | relative_url }});"></div>
         <div class="overlay">
-          <a href="{{ project.url }}" target="_blank" class="demo-btn">View Demo</a>
+          <a href="{{ project.url }}" target="_blank" class="demo-btn">View Live Demo</a>
         </div>
       </div>
       <div class="project-content">
@@ -28,14 +28,14 @@ Explore some of my major systems, built with real-world applications in logistic
         </ul>
         <p><strong>Tech Stack:</strong> {{ project.tech }}</p>
       </div>
-    </a>
+    </div>
   {% endfor %}
 </div>
 
 <style>
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
@@ -46,23 +46,21 @@ Explore some of my major systems, built with real-world applications in logistic
   background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
-  text-decoration: none;
   color: inherit;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .project-card:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .project-image-wrapper {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
-  border-bottom: 1px solid #eee;
 }
 
 .project-image {
@@ -70,54 +68,42 @@ Explore some of my major systems, built with real-world applications in logistic
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .overlay {
-  opacity: 1;
+  bottom: 10px;
+  right: 10px;
 }
 
 .demo-btn {
-  padding: 8px 16px;
-  background: #1e90ff;
-  color: white;
-  border-radius: 8px;
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 6px;
   text-decoration: none;
+  font-size: 0.85em;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background 0.2s;
 }
 
 .demo-btn:hover {
-  background: #0d6efd;
+  background-color: var(--color-primary-dark);
 }
 
 .project-content {
   padding: 15px;
-  text-align: left;
 }
 
 .project-content h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.3em;
-  color: var(--primary-color);
+  margin: 0 0 8px 0;
+  font-size: 1.25em;
 }
 
 .project-content ul {
@@ -133,8 +119,8 @@ Explore some of my major systems, built with real-world applications in logistic
 
 .project-content p {
   margin: 5px 0;
-  color: #666;
   font-size: 0.95em;
+  color: #666;
   line-height: 1.4;
 }
 </style>
