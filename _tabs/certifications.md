@@ -92,11 +92,6 @@ Each entry includes:
 
 ---
 
-## 📌 Notes
-- Verification links currently use placeholders (`#`). Replace each one with the actual Credly link for the badge.  
-- New badges can be added at any time by copying the format above.  
-
----
 
 Thank you for viewing my certifications.  
 If you need direct confirmation or transcripts, feel free to contact me:
