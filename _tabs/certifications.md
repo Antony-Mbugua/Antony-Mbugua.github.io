@@ -29,7 +29,6 @@ Each entry includes:
 - Credential ID  
 - A verification link  
 
-You can update the verification links by replacing the placeholder URLs with your actual badge URLs.
 
 ---
 
