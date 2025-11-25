@@ -1,27 +1,26 @@
 ---
 layout: page
-# No need for title, it defaults to site.title
 ---
 
 <div class="home-content">
 
   <h1>👋 Welcome</h1>
-  <p style="font-size: 1.25rem; line-height: 1.8;">
-    This is my portfolio hub — where I share security projects, technical writeups, and updates on my work in applied computing & cybersecurity.
+  <p style="font-size: 1.25rem; line-height: 1.7;">
+    This space highlights my work in applied computing and cybersecurity. I focus on practical security, system reliability, and building tools that solve real operational challenges.
   </p>
 
   <hr/>
 
-  <h2>🚀 Featured Work</h2>
+  <h2>🚀 Featured Projects</h2>
   <ul>
-    <li>🛡 <a href="/projects">All Over Logistics TMS</a> — React + MySQL trucking system with secure auth.</li>
-    <li>🔍 <a href="/writeups">Cybersecurity Writeups</a> — Practical solutions to HackTheBox & TryHackMe labs.</li>
-    <li>☁ <a href="/projects">Nextcloud Self-Hosted Drive</a> — Secure internal cloud storage.</li>
+    <li>🛡 <a href="/projects">Transport Management System (TMS)</a> — A full-stack platform with secure authentication, expense tracking, and SIEM-style logging.</li>
+    <li>🔍 <a href="/writeups">Cybersecurity Writeups</a> — Notes and walkthroughs from HackTheBox and TryHackMe labs.</li>
+    <li>☁ <a href="/projects">Self-Hosted Nextcloud</a> — Internal cloud platform for secure file management.</li>
   </ul>
 
   <hr/>
 
-  <h2>📝 Latest Writeups</h2>
+  <h2>📝 Recent Writeups</h2>
   <ul>
     {% assign posts = site.categories.writeups | slice: 0, 3 %}
     {% for post in posts %}
@@ -31,16 +30,19 @@ layout: page
 
   <hr/>
 
-  <h2>📢 Updates</h2>
-  <ul>
-    <li>🎓 Final-year BSc in Applied Computing (InfoSec & Forensics).</li>
-    <li>👨‍💻 Interning in cybersecurity at <b>The Red Users</b>.</li>
-    <li>📚 Currently working on <b>SOC-related writeups</b>.</li>
-  </ul>
+<h2>📢 Latest Updates</h2>
+<ul>
+  <li>🎓 Completed BSc in Applied Computing (Information Security & Forensics).</li>
+  <li>⚙️ Expanding the Transport Management System with improved authentication, logging, and secure workflows.</li>
+  <li>🔐 Supporting organizations with cybersecurity tasks and secure system deployment.</li>
+  <li>📚 Deepening skills in cloud security, SOC analysis, and secure API development.</li>
+  <li>🧪 Conducting ongoing security testing across personal and client projects to strengthen practical expertise.</li>
+</ul>
+
 
   <hr/>
 
-  <h2>👉 Explore More</h2>
+  <h2>📂 Explore</h2>
   <ul>
     <li><a href="/about">About Me</a></li>
     <li><a href="/projects">Projects</a></li>
@@ -48,5 +50,4 @@ layout: page
     <li><a href="/categories">Categories</a></li>
     <li><a href="/tags">Tags</a></li>
   </ul>
-
 </div>
