@@ -1,5 +1,5 @@
 - title: "All Over Logistics – Transport Management System"
-  description: "A production-grade TMS built for All Over Logistics to manage shipments, drivers, dispatch, and invoices efficiently. Improves operational efficiency and reduces manual errors by integrating real OCR, secure authentication, and automated workflows."
+  description: "Production-grade TMS for All Over Logistics to manage shipments, drivers, dispatch, and invoices efficiently."
   features:
     - "Load creation & dispatch workflow"
     - "OCR extraction using Tesseract.js"
@@ -14,7 +14,7 @@
   category: "Logistics"
 
 - title: "277 Logistics – Transport Management System"
-  description: "Custom TMS for 277 Logistics, focused on dispatch efficiency, broker management, and invoice automation, with a secure web dashboard for admins and dispatchers."
+  description: "Custom TMS for 277 Logistics, focused on dispatch efficiency, broker management, and invoice automation."
   features:
     - "Dispatcher dashboard & role-based access"
     - "Broker credit check workflow"
@@ -28,13 +28,13 @@
   category: "Logistics"
 
 - title: "Pairing System – Smart Runs & Pair Generator"
-  description: "An automated system that dynamically generates team runs and pairs, with admin controls for schedules, validations, and exports. Enhances organizational efficiency."
+  description: "Automated system generating team runs and pairs, with admin controls for schedules, validations, and exports."
   features:
     - "Automatic generation of pairs/runs"
     - "Admin panel for managing teams and schedules"
     - "Real-time validation of pair assignments"
     - "Exportable results and reports"
-    - "Clean, intuitive UI for all users"
+    - "Clean, intuitive UI"
   tech: "Laravel/PHP, MySQL, Tailwind CSS, JavaScript"
   url: "https://tech-realm.top"
   image: "/assets/images/projects/img5.jpg"
