@@ -1,0 +1,22 @@
+<div class="project-card">
+  <div class="project-image-wrapper">
+    <div class="project-image" style="background-image: url({{ project.image | relative_url }});"></div>
+    <div class="overlay">
+      {% if project.url %}
+      <a href="{{ project.url }}" target="_blank" class="demo-btn">View Live Demo</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="project-content">
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+    {% if project.features %}
+    <ul>
+      {% for feature in project.features %}
+        <li>{{ feature }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <p><strong>Tech Stack:</strong> {{ project.tech }}</p>
+  </div>
+</div>
