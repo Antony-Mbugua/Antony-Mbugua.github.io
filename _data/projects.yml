@@ -11,6 +11,7 @@
   tech: "React, Node.js, Laravel, MySQL, Tailwind CSS, Hostinger Cloud"
   url: "https://alloverlogistics.com"
   image: "/assets/images/projects/img1.png"
+  category: "Logistics"
 
 - title: "277 Logistics – Transport Management System"
   description: "Custom TMS for 277 Logistics, focused on dispatch efficiency, broker management, and invoice automation, with a secure web dashboard for admins and dispatchers."
@@ -24,6 +25,7 @@
   tech: "React, Laravel, Node.js, MySQL, Tailwind CSS"
   url: "https://277logistics.com"
   image: "/assets/images/projects/img2.jpg"
+  category: "Logistics"
 
 - title: "Pairing System – Smart Runs & Pair Generator"
   description: "An automated system that dynamically generates team runs and pairs, with admin controls for schedules, validations, and exports. Enhances organizational efficiency."
@@ -36,4 +38,4 @@
   tech: "Laravel/PHP, MySQL, Tailwind CSS, JavaScript"
   url: "https://tech-realm.top"
   image: "/assets/images/projects/img5.jpg"
-
+  category: "Systems"
