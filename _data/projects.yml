@@ -1,3 +1,15 @@
+- title: Windows Server Active Directory Lab
+  description: Deployment of a Windows Server virtual environment and Active Directory domain controller including networking, static IP configuration, and domain verification.
+  category: Systems
+  image: /assets/img/projects/windows-ad.png
+  link: https://github.com/YOURUSERNAME/windows-server-active-directory-lab
+  tags:
+    - Windows Server
+    - Active Directory
+    - Virtualization
+    - Networking
+
+
 - title: "All Over Logistics – Transport Management System"
   description: "Production-grade TMS for All Over Logistics to manage shipments, drivers, dispatch, and invoices efficiently."
   features:
