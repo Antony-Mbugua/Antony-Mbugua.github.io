@@ -1,17 +1,19 @@
-- title: Windows Server Active Directory Lab
-  description: Deployment of a Windows Server virtual environment and Active Directory domain controller including networking, static IP configuration, and domain verification.
-  category: Systems
-  image: /assets/img/projects/windows-ad.png
-  link: https://github.com/YOURUSERNAME/windows-server-active-directory-lab
+- title: "Windows Server Active Directory Lab"
+  description: "Deployment of a Windows Server virtual environment and Active Directory domain controller including networking, static IP configuration, and domain verification."
+  category: "Systems"
+  image: "/assets/img/projects/windows-ad.png"
+  link: "https://github.com/YOURUSERNAME/windows-server-active-directory-lab"
   tags:
-    - Windows Server
-    - Active Directory
-    - Virtualization
-    - Networking
+    - "Windows Server"
+    - "Active Directory"
+    - "Virtualization"
+    - "Networking"
 
-
-- title: "All Over Logistics – Transport Management System"
+- title: "All Over Logistics - Transport Management System"
   description: "Production-grade TMS for All Over Logistics to manage shipments, drivers, dispatch, and invoices efficiently."
+  category: "Logistics"
+  image: "/assets/images/projects/img1.png"
+  link: "https://alloverlogistics.com"
   features:
     - "Load creation & dispatch workflow"
     - "OCR extraction using Tesseract.js"
@@ -21,12 +23,12 @@
     - "Expense tracking"
     - "Real-time chat with Socket.IO"
   tech: "React, Node.js, Laravel, MySQL, Tailwind CSS, Hostinger Cloud"
-  url: "https://alloverlogistics.com"
-  image: "/assets/images/projects/img1.png"
-  category: "Logistics"
 
-- title: "277 Logistics – Transport Management System"
-  description: "Custom TMS for 277 Logistics, focused on dispatch efficiency, broker management, and invoice automation."
+- title: "277 Logistics - Transport Management System"
+  description: "Custom TMS for 277 Logistics focused on dispatch efficiency, broker management, and invoice automation."
+  category: "Logistics"
+  image: "/assets/images/projects/img2.jpg"
+  link: "https://277logistics.com"
   features:
     - "Dispatcher dashboard & role-based access"
     - "Broker credit check workflow"
@@ -35,19 +37,16 @@
     - "Secure login and authentication"
     - "Load tracking & reporting"
   tech: "React, Laravel, Node.js, MySQL, Tailwind CSS"
-  url: "https://277logistics.com"
-  image: "/assets/images/projects/img2.jpg"
-  category: "Logistics"
 
-- title: "Pairing System – Smart Runs & Pair Generator"
-  description: "Automated system generating team runs and pairs, with admin controls for schedules, validations, and exports."
+- title: "Pairing System - Smart Runs & Pair Generator"
+  description: "Automated system generating team runs and pairs with admin controls for schedules, validations, and exports."
+  category: "Systems"
+  image: "/assets/images/projects/img5.jpg"
+  link: "https://tech-realm.top"
   features:
     - "Automatic generation of pairs/runs"
     - "Admin panel for managing teams and schedules"
     - "Real-time validation of pair assignments"
     - "Exportable results and reports"
-    - "Clean, intuitive UI"
+    - "Clean intuitive UI"
   tech: "Laravel/PHP, MySQL, Tailwind CSS, JavaScript"
-  url: "https://tech-realm.top"
-  image: "/assets/images/projects/img5.jpg"
-  category: "Systems"
