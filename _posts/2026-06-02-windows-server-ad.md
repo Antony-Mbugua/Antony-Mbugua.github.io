@@ -5,7 +5,7 @@ date: 2026-02-07
 categories: [Systems, Infrastructure]
 tags: [Windows Server, Active Directory, Virtualization, Networking]
 image:
-  path: /assets/img/projects/windows-ad.png
+  path: /assets/projects/windows-ad.png
 ---
 
 # Windows Server Active Directory Lab
