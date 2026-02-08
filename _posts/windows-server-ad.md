@@ -1,3 +1,13 @@
+---
+layout: post
+title: "Windows Server Active Directory Lab"
+date: 2026-02-07
+categories: [Systems, Infrastructure]
+tags: [Windows Server, Active Directory, Virtualization, Networking]
+image:
+  path: /assets/img/projects/windows-ad.png
+---
+
 # Windows Server Active Directory Lab
 
 ## Overview
@@ -10,24 +20,24 @@ This lab mirrors how organizations deploy domain controllers, manage users, and 
 
 ## Objectives
 
-- Install Windows Server in a virtual machine
-- Configure VM networking
-- Implement static IP addressing
-- Deploy Active Directory Domain Services
-- Promote a domain controller
-- Validate domain functionality
-- Troubleshoot connectivity issues
+- Install Windows Server in a virtual machine  
+- Configure VM networking  
+- Implement static IP addressing  
+- Deploy Active Directory Domain Services  
+- Promote a domain controller  
+- Validate domain functionality  
+- Troubleshoot connectivity issues  
 
 ---
 
 ## Tools & Technologies
 
-- Windows Server 2025 (Desktop Experience)
-- VirtualBox / VMware
-- Active Directory Domain Services
-- Group Policy Management
-- Virtual networking (NAT)
-- Static IP configuration
+- Windows Server 2025 (Desktop Experience)  
+- VirtualBox / VMware  
+- Active Directory Domain Services  
+- Group Policy Management  
+- Virtual networking (NAT)  
+- Static IP configuration  
 
 ---
 
@@ -45,10 +55,8 @@ Configured NAT networking and assigned a static IP to support domain services.
 ### 4. Active Directory Deployment
 Installed AD Domain Services and promoted the server to a domain controller.
 
-Domain created:
-
-ad.techrealm.local
-
+**Domain created:**  
+`ad.techrealm.local`
 
 ### 5. Verification
 Confirmed domain functionality using Active Directory administrative tools and test user creation.
@@ -57,14 +65,14 @@ Confirmed domain functionality using Active Directory administrative tools and t
 
 ## Key Skills Demonstrated
 
-- Server virtualization
-- Windows Server installation
-- Network configuration
-- Static IP addressing
-- Active Directory deployment
-- Domain controller promotion
-- Troubleshooting VM networking
-- Technical documentation
+- Server virtualization  
+- Windows Server installation  
+- Network configuration  
+- Static IP addressing  
+- Active Directory deployment  
+- Domain controller promotion  
+- Troubleshooting VM networking  
+- Technical documentation  
 
 ---
 
@@ -79,13 +87,13 @@ This reinforced troubleshooting methodology in virtual environments.
 
 ## Screenshots
 
-*(Add screenshots here to show key stages)*
+*(Add screenshots here)*
 
-- VM creation
-- Static IP configuration
-- AD installation
-- Domain controller promotion
-- Active Directory console
+- VM creation  
+- Static IP configuration  
+- AD installation  
+- Domain controller promotion  
+- Active Directory console  
 
 ---
 
@@ -93,22 +101,16 @@ This reinforced troubleshooting methodology in virtual environments.
 
 The lab environment successfully simulates enterprise identity infrastructure. I gained practical experience in deploying and managing Active Directory within a virtualized setup.
 
-This project forms the foundation for future labs involving:
+Future expansion includes:
 
-- Group Policy implementation
-- Certificate Services
-- Client domain joining
-- Hybrid cloud integration
-
----
-
-## Repository
-
-👉 [View full project repository](#)
+- Group Policy implementation  
+- Certificate Services  
+- Client domain joining  
+- Hybrid cloud integration  
 
 ---
 
 ## Author
 
-**ANTONY M GITHINJI**  
+**Antony M Githinji**  
 Systems & Infrastructure Lab Project
