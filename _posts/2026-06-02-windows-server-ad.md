@@ -218,6 +218,8 @@ The server was promoted as the first Domain Controller in a new forest.
 
 A DSRM password was configured for offline Active Directory maintenance and disaster recovery.
 
+![DSRM password](/assets/images/projects/windows-server/ws-DSRM-password.png)
+
 > Screenshot: DSRM configuration during promotion process.
 
 ---
@@ -225,6 +227,8 @@ A DSRM password was configured for offline Active Directory maintenance and disa
 ## Prerequisite Validation & Promotion
 
 The system performed prerequisite checks to validate DNS configuration and forest readiness.
+
+![Prerequisite Checks](/assets/images/projects/windows-server/ws-prerequisite-checks.png)
 
 > Screenshot: Promotion validation results.
 
@@ -236,6 +240,12 @@ After successful validation, the server was promoted to Domain Controller.
 
 The system automatically rebooted to complete AD initialization.
 
+![System Reboot](/assets/images/projects/windows-server/AD-System-Reboot.png)
+
+> Screenshot: System Rebooting.
+
+![Domain Account](/assets/images/projects/windows-server/Domain-Works.png)
+
 > Screenshot: Post-promotion login showing domain-qualified administrator account.
 
 ---
@@ -246,6 +256,8 @@ The system automatically rebooted to complete AD initialization.
 
 The ADUC console was opened to verify domain structure.
 
+![Active Directory Users and Computer Console](/assets/images/projects/windows-server/AD-After-Domain-Promotion.png)
+
 > Screenshot: Active Directory Users and Computers console.
 
 ---
@@ -254,23 +266,105 @@ The ADUC console was opened to verify domain structure.
 
 Default containers and built-in security groups were verified.
 
+![AD Structure](/assets/images/projects/windows-server/AD-containers.png)
+
 > Screenshot: Domain tree structure.
 
 ---
 
 ## Test User Creation
 
-A sample domain user was created to validate directory functionality.
+A sample domain user "Antony Githinji" was created to validate directory functionality.
 
-> Screenshot: Domain user creation.
+![Add New User](/assets/images/projects/windows-server/user-create.png)
+
+> Screenshot: Domain user creation wizard.
+
+![Creation Wizard](/assets/images/projects/windows-server/user-create2.png)
+
+> Screenshot: User Creation Wizard.
+
+![User Log In](/assets/images/projects/windows-server/other-user.png)
+
+> Screenshot: Test user login attempt (failed initially due to login restrictions).
+
+The User account failed to Login even because we had not alloed the "allow log on locally" option
+
+After Allowing the option.
+
+![Allow Log On Locally](/assets/images/projects/windows-server/allow-log-on-locally.png)
+
+![User Logged In successfully](/assets/images/projects/windows-server/new-user-logged.png)
+
+> Screenshot: Test user login after allowing "Allow log on locally" in Default Domain Controllers Policy.
 
 ---
 
-## Group Policy Management
+## Organizational Units (Optional)
 
-The Group Policy Management Console (GPMC) was accessed to confirm policy administration capability.
+Custom OUs were created to simulate a real-world structure:
 
-> Screenshot: Group Policy Management Console.
+- IT
+- HR
+- Staff
+
+![Organisational Units OUs](/assets/images/projects/windows-server/group-policy2.png)
+
+> Screenshot: ADUC console showing newly created OUs.
+
+---
+
+## DNS Configuration Validation
+
+DNS Manager was opened to confirm correct zone creation and SRV records:
+
+- Forward Lookup Zone
+- `_msdcs` zone
+- SRV records for LDAP/Kerberos
+- A record for the Domain Controller
+
+![DNS-Manager](/assets/images/projects/windows-server/dns-manager.png)
+> Screenshot: DNS Manager showing AD-integrated zones.
+
+![SRV_Records](/assets/images/projects/windows-server/srv-records.png)
+> Screenshot: SRV records inside `_msdcs` zone.
+
+---
+
+## SYSVOL & NETLOGON Share Verification
+
+Domain shares were verified:
+
+Expected shares: SYSVOL, NETLOGON
+
+![SYSVOL & NETLOGON](/assets/images/projects/windows-server/SYSVOL-NETLOGON.png)
+
+> Screenshot: Output of `net share` showing SYSVOL and NETLOGON.
+
+---
+
+## FSMO Role Verification
+
+FSMO roles were verified using:
+
+All roles confirmed assigned to the DC.
+
+![FSMO](/assets/images/projects/windows-server/FSMO.png)
+
+> Screenshot: FSMO role query output.
+
+---
+
+## Group Policy Management (GPMC)
+
+The Group Policy Management Console was accessed to confirm policy administration capability.
+
+- Default Domain Policy verified
+- GPO structure validated
+
+![Group Policies](/assets/images/projects/windows-server/group-policy2.png)
+
+> Screenshot: GPMC console showing Default Domain Policy and linked OUs.
 
 ---
 
@@ -278,22 +372,24 @@ The Group Policy Management Console (GPMC) was accessed to confirm policy admini
 
 ## Network Troubleshooting
 
-Connectivity issues were resolved by correcting adapter configuration and revalidating IP settings.
+Network configuration was verified and connectivity issues resolved:
 
-> Screenshot: Corrected adapter configuration.
+![IP Config /all](/assets/images/projects/windows-server/networking-troubleshoot.png)
+> Screenshot: `ipconfig /all` output confirming correct settings.
 
 ---
 
 ## Service Verification
 
-Critical services were verified to confirm domain health:
+Critical services were verified:
 
 - DNS Server
 - Netlogon
 - Kerberos Key Distribution Center (KDC)
 - Active Directory Domain Services
 
-> Screenshot: Services console confirming operational status.
+![Services](/assets/images/projects/windows-server/service-verification.png)
+> Screenshot: Services console showing all critical AD services running.
 
 ---
 
@@ -302,11 +398,11 @@ Critical services were verified to confirm domain health:
 Domain functionality was confirmed through:
 
 - Successful domain login
-- User object visibility
+- Test user authentication
+- User object visibility in ADUC
 - DNS resolution
-- Active Directory tool accessibility
+- Group Policy accessibility
 
-> Screenshot: Fully operational domain controller environment.
 
 ---
 
