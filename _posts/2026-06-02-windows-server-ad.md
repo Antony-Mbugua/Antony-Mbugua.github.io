@@ -1,317 +1,337 @@
-<img width="1073" height="671" alt="image" src="https://github.com/user-attachments/assets/053b3ee2-0f03-4eb3-840b-4b4bb07b442a" />---
+---
 layout: post
-title: "Windows Server 2025 Virtualization & Active Directory Deployment Lab"
+title: "Windows Server 2025 Active Directory Deployment Lab"
 date: 2026-02-07
 categories: [Systems, Infrastructure]
-tags: [Windows Server, Active Directory, Virtualization, Networking]
+tags: [Windows Server, Active Directory, Virtualization, DNS, Networking]
 image:
   path: /assets/images/projects/windows-server/ws14.png
 ---
 
-# Windows Server 2025 Virtualization & Active Directory Deployment Lab
+# Windows Server 2025 Active Directory Deployment Lab
 
-## Overview
+## Executive Summary
 
-In this lab, I implemented a complete Windows Server 2025 virtual environment and deployed Active Directory Domain Services (AD DS). The objective was to simulate a real-world enterprise infrastructure setup while strengthening my skills in virtualization, networking, domain management, and troubleshooting.
+This lab demonstrates the deployment of a Windows Server 2025 Domain Controller within a virtualized environment. The objective was to simulate a real-world enterprise identity infrastructure by implementing:
 
-This walkthrough documents the entire process — from ISO preparation to a fully operational domain controller.
+- Virtual machine provisioning
+- Static network configuration
+- Active Directory Domain Services (AD DS)
+- DNS integration
+- Domain controller promotion
+- Service validation and troubleshooting
+
+The result is a fully functional domain controller capable of supporting centralized authentication, policy enforcement, and identity management.
 
 ---
 
-## Objectives
+# 1. Infrastructure Architecture
 
-- Install Windows Server 2025 in a virtual machine  
-- Configure virtual networking  
-- Assign static IP addressing  
-- Install Active Directory Domain Services  
-- Promote a domain controller  
-- Validate domain functionality  
-- Troubleshoot deployment issues  
+## Deployment Model
 
-![VM iMAGE](/assets/images/projects/windows-server/ws1.png)
+- **Single Forest**
+- **Single Domain**
+- **Single Domain Controller**
+- **AD-Integrated DNS**
+- **Static IP Addressing**
+
+This configuration mirrors foundational enterprise infrastructure used in small to medium-sized organizations.
+
 ---
 
-## Environment Setup
+# 2. Environment Setup
 
-### Hardware
+## Hardware
 
-- Virtualization-capable PC  
+- Virtualization-capable workstation  
 - Minimum 16 GB RAM  
 - SSD storage  
 
-### Software
+## Software
 
-- VirtualBox / VMware  
-- Windows Server 2025 ISO  
-
----
-
-# Phase 1 — Windows Server Virtual Machine Setup
-
-## Step 1 — Download Windows Server ISO
-
-I downloaded the Windows Server 2025 evaluation ISO from Microsoft.
-
-![Windows Server 2025 Installation Page](/assets/images/projects/windows-server/ws-install.png) 
+- Hypervisor: VirtualBox / VMware  
+- Windows Server 2025 ISO (Desktop Experience)  
 
 ---
 
-## Step 2 — Create Virtual Machine
+# 3. Virtual Machine Provisioning
 
-I created a new VM with:
+## Windows Server ISO Acquisition
 
-- Allocated RAM  
-- CPU cores  
-- Virtual disk storage  
+The official Windows Server 2025 evaluation ISO was downloaded directly from Microsoft.
 
-![VM Resources](/assets/images/projects/windows-server/ws-vm.png) 
+![Windows Server ISO Download](/assets/images/projects/windows-server/ws-install.png)
+
+> Screenshot: Official Microsoft evaluation page confirming secure ISO acquisition.
 
 ---
 
-## Step 3 — Attach ISO & Boot VM
+## Virtual Machine Creation
 
-Mounted the ISO and launched installation.
+A new virtual machine was created with adequate compute resources to support directory services.
+
+![VM Resource Allocation](/assets/images/projects/windows-server/ws-vm.png)
+
+> Screenshot: VM configuration showing assigned RAM, CPU cores, and disk storage.
+
+Proper resource allocation ensures stable AD DS and DNS operation.
+
+---
+
+## ISO Mounting and Boot
+
+The ISO was attached to the virtual optical drive and the VM booted to begin installation.
 
 ![VM Boot](/assets/images/projects/windows-server/ws2.png)
 
-![Windows Server Setup](/assets/images/projects/windows-server/ws3.png)
+> Screenshot: VM successfully booting from mounted ISO.
 
 ---
 
-# Phase 2 — Windows Server Installation
+# 4. Windows Server Installation
 
-## Step 4 — OS Installation
+## OS Selection
 
-Selected Desktop Experience and completed installation.
+The **Desktop Experience** edition was selected to allow GUI-based administrative configuration.
 
-![Setup 1](/assets/images/projects/windows-server/ws4.png)
-![Setup 2](/assets/images/projects/windows-server/ws5.png)
-![Setup 3](/assets/images/projects/windows-server/ws6.png)
+![Windows Setup 1](/assets/images/projects/windows-server/ws3.png)
 
----
+> Screenshot: Initial Windows Server setup interface.
 
-## Step 5 — Administrator Setup
+![Windows Setup 2](/assets/images/projects/windows-server/ws4.png)
 
-Configured administrator credentials and initial login.
+> Screenshot: OS edition selection screen.
 
-![Amin Logins](/assets/images/projects/windows-server/ws12.png)
+![Windows Setup 3](/assets/images/projects/windows-server/ws5.png)
 
----
-
-# Phase 3 — Network Configuration
-
-## Step 6 — Adapter Configuration
-
-Verified NAT/bridged networking inside VM settings.
-
-![VM Network/Adapetr Configs](/assets/images/projects/windows-server/ws-adapter.png)
+> Screenshot: Installation progress.
 
 ---
 
-## Step 7 — Static IP Assignment
+## Administrator Configuration
 
-Configured static IP, subnet mask, gateway, and DNS.
+The local Administrator account password was configured during initial setup.
 
-![Server Network Adapter Settings](/assets/images/projects/windows-server/ws-network-ad.png)  
-![Static IP](/assets/images/projects/windows-server/ws-ipv4-static-ip.png)  
+![Administrator Login](/assets/images/projects/windows-server/ws12.png)
 
----
-
-## Step 8 — Connectivity Testing
-
-Validated network connectivity.
-
-![Ping Test](/assets/images/projects/windows-server/ws-ping.png)   
+> Screenshot: First successful login to Windows Server environment.
 
 ---
 
-# Phase 4 — Server Preparation
+# 5. Network Configuration
 
-## Step 9 — Rename Server
+## Virtual Network Adapter Verification
 
-Renamed the server to reflect domain controller role.
+The VM network adapter was configured to ensure connectivity between the server and host network.
 
-![Server Rename](/assets/images/projects/windows-server/ws-rename.png)   
+![VM Adapter Configuration](/assets/images/projects/windows-server/ws-adapter.png)
 
----
-
-## Step 10 — Restart System
-
-Restarted to apply configuration.
-
-![Restart to Apply Setup](/assets/images/projects/windows-server/ws14.png)  
+> Screenshot: Virtual network adapter settings within hypervisor.
 
 ---
 
-# Phase 5 — Active Directory Installation
+## Static IP Address Assignment
 
-## Step 11 — Add Roles & Features
+Domain Controllers require static IP addressing to ensure consistent DNS resolution and service discovery.
 
-Installed Active Directory Domain Services via Server Manager.
+![Network Adapter Settings](/assets/images/projects/windows-server/ws-network-ad.png)
 
-![Add Roles](/assets/images/projects/windows-server/ws-add-roles.png)  
-![AD Roles](/assets/images/projects/windows-server/ws-AD-roles-installation-page.png) 
-![Installation Type](/assets/images/projects/windows-server/ws-installation-type-select-role-based.png)  
-![Server Selection](/assets/images/projects/windows-server/ws-server-select-from-pool(SVR-LAB-TECH).png)  
-![Server Roles](/assets/images/projects/windows-server/ws-AD-Domain-Service-select.png)  
+> Screenshot: Network adapter configuration interface.
 
----
+![Static IPv4 Configuration](/assets/images/projects/windows-server/ws-ipv4-static-ip.png)
 
-## Step 12 — Installation Confirmation
+> Screenshot: Static IP, subnet mask, gateway, and DNS server configuration.
 
-Verified successful installation.
-
-![Installation](/assets/images/projects/windows-server/ws-Insatallation(AD).png) 
-![Success Install](/assets/images/projects/windows-server/ws-success-install.png)  
-![AD Installed](/assets/images/projects/windows-server/AD-installed.png)  
----
-
-# Phase 6 — Domain Controller Promotion
-
-## Step 13 — Promote Server
-
-Created a new forest:
-
-
-![Promoting Server](/assets/images/projects/windows-server/ws-promote-to-a-domain-controller.png)  
-![Deployment Config](/assets/images/projects/windows-server/ws-AD-Deployment-Configuration.png)  
+The server was configured to use its own static IP as the primary DNS server — a requirement for AD-integrated DNS.
 
 ---
 
-## Step 14 — Directory Services Restore Mode
+## Connectivity Testing
 
-Configured DSRM password.
+Network reachability was validated using ICMP testing.
 
-📸 Screenshot 19 — DSRM configuration  
+![Ping Test](/assets/images/projects/windows-server/ws-ping.png)
 
----
-
-## Step 15 — Final Promotion
-
-Completed domain controller setup.
-
-📸 Screenshot 20 — Promotion validation  
+> Screenshot: Successful ping confirming network connectivity.
 
 ---
 
-## Step 16 — Automatic Restart
+# 6. Server Preparation
 
-Server rebooted into domain environment.
+## Hostname Configuration
 
-📸 Screenshot 21 — Post-promotion login  
+The server was renamed to reflect its infrastructure role.
 
----
+![Server Rename](/assets/images/projects/windows-server/ws-rename.png)
 
-# Phase 7 — Active Directory Verification
-
-## Step 17 — Open AD Tools
-
-Accessed administrative consoles.
-
-📸 Screenshot 22 — AD Users & Computers  
+> Screenshot: System rename configuration.
 
 ---
 
-## Step 18 — Domain Validation
+## Restart to Apply Changes
 
-Confirmed domain structure.
+A restart was performed to apply hostname and network modifications.
 
-📸 Screenshot 23 — Domain tree  
+![System Restart](/assets/images/projects/windows-server/ws14.png)
 
----
-
-## Step 19 — Test User Creation
-
-Created sample users.
-
-📸 Screenshot 24 — User creation  
+> Screenshot: System reboot applying configuration updates.
 
 ---
 
-## Step 20 — Policy Verification
+# 7. Active Directory Installation
 
-Verified Group Policy availability.
+## Adding Roles and Features
 
-📸 Screenshot 25 — GPO console  
+Active Directory Domain Services (AD DS) was installed using Server Manager.
 
----
+![Add Roles Wizard](/assets/images/projects/windows-server/ws-add-roles.png)
 
-# Phase 8 — Troubleshooting & Validation
+> Screenshot: Server Manager role installation wizard.
 
-## Step 21 — Network Troubleshooting
+![Role Selection](/assets/images/projects/windows-server/ws-AD-Domain-Service-select.png)
 
-Resolved connectivity issues caused by adapter misconfiguration.
+> Screenshot: Selection of Active Directory Domain Services.
 
-📸 Screenshot 26 — Adapter correction  
+![Installation Confirmation](/assets/images/projects/windows-server/ws-success-install.png)
 
----
-
-## Step 22 — Static IP Revalidation
-
-Ensured domain services function correctly.
-
-📸 Screenshot 27 — IP verification  
+> Screenshot: Successful AD DS role installation confirmation.
 
 ---
 
-## Step 23 — Service Confirmation
+# 8. Domain Controller Promotion
 
-Verified AD services are running.
+## Forest Creation
 
-📸 Screenshot 28 — Services console  
+The server was promoted as the first Domain Controller in a new forest.
 
----
+![Promote to Domain Controller](/assets/images/projects/windows-server/ws-promote-to-a-domain-controller.png)
 
-## Step 24 — Final Validation
+> Screenshot: Promotion wizard initiation.
 
-Confirmed domain controller health.
+![Deployment Configuration](/assets/images/projects/windows-server/ws-AD-Deployment-Configuration.png)
 
-📸 Screenshot 29 — System validation  
-
----
-
-## Step 25 — Operational Environment
-
-Final working environment.
-
-📸 Screenshot 30 — Fully operational domain  
+> Screenshot: New forest configuration.
 
 ---
 
-# Key Skills Demonstrated
+## Directory Services Restore Mode (DSRM)
 
-- Virtualization deployment  
-- Windows Server installation  
-- Static network configuration  
-- Active Directory deployment  
+A DSRM password was configured for offline Active Directory maintenance and disaster recovery.
+
+> Screenshot: DSRM configuration during promotion process.
+
+---
+
+## Prerequisite Validation & Promotion
+
+The system performed prerequisite checks to validate DNS configuration and forest readiness.
+
+> Screenshot: Promotion validation results.
+
+After successful validation, the server was promoted to Domain Controller.
+
+---
+
+## Post-Promotion Reboot
+
+The system automatically rebooted to complete AD initialization.
+
+> Screenshot: Post-promotion login showing domain-qualified administrator account.
+
+---
+
+# 9. Active Directory Verification
+
+## Active Directory Users and Computers
+
+The ADUC console was opened to verify domain structure.
+
+> Screenshot: Active Directory Users and Computers console.
+
+---
+
+## Domain Structure Validation
+
+Default containers and built-in security groups were verified.
+
+> Screenshot: Domain tree structure.
+
+---
+
+## Test User Creation
+
+A sample domain user was created to validate directory functionality.
+
+> Screenshot: Domain user creation.
+
+---
+
+## Group Policy Management
+
+The Group Policy Management Console (GPMC) was accessed to confirm policy administration capability.
+
+> Screenshot: Group Policy Management Console.
+
+---
+
+# 10. Service & Health Validation
+
+## Network Troubleshooting
+
+Connectivity issues were resolved by correcting adapter configuration and revalidating IP settings.
+
+> Screenshot: Corrected adapter configuration.
+
+---
+
+## Service Verification
+
+Critical services were verified to confirm domain health:
+
+- DNS Server
+- Netlogon
+- Kerberos Key Distribution Center (KDC)
+- Active Directory Domain Services
+
+> Screenshot: Services console confirming operational status.
+
+---
+
+## Final Validation
+
+Domain functionality was confirmed through:
+
+- Successful domain login
+- User object visibility
+- DNS resolution
+- Active Directory tool accessibility
+
+> Screenshot: Fully operational domain controller environment.
+
+---
+
+# Skills Demonstrated
+
+- Virtual infrastructure provisioning  
+- Windows Server deployment  
+- Static IP and DNS configuration  
+- Active Directory Domain Services implementation  
+- Forest and domain creation  
 - Domain controller promotion  
-- Infrastructure troubleshooting  
-- Documentation discipline  
+- Enterprise troubleshooting methodology  
+- Structured technical documentation  
 
 ---
 
-# Challenges & Solutions
+# Conclusion
 
-**Issue:** VM networking failure  
-**Resolution:** Adapter correction and IP reconfiguration.
+This lab successfully implemented a fully functional Windows Server 2025 Domain Controller within a virtualized environment.
 
-This reinforced structured troubleshooting methodology.
+The deployment establishes a foundational enterprise identity infrastructure capable of supporting:
 
----
+- Centralized authentication
+- Group Policy enforcement
+- Domain-based resource management
+- Future integration with client systems and additional domain controllers
 
-# Outcome
-
-I successfully deployed a fully functional Windows Server domain controller within a virtualized environment. The system mirrors enterprise infrastructure and forms the foundation for advanced labs including:
-
-- Group Policy deployment  
-- Certificate Services  
-- Client domain joining  
-- Hybrid identity environments  
-
----
-
-# Author
-
-**Antony M Githinji**  
-Infrastructure & Systems Lab Implementation
-
+This implementation reinforces core competencies in systems administration, infrastructure engineering, and enterprise identity architecture.
