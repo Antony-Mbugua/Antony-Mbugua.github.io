@@ -1,4 +1,4 @@
----
+<img width="1073" height="671" alt="image" src="https://github.com/user-attachments/assets/053b3ee2-0f03-4eb3-840b-4b4bb07b442a" />---
 layout: post
 title: "Windows Server 2025 Virtualization & Active Directory Deployment Lab"
 date: 2026-02-07
@@ -104,7 +104,7 @@ Configured administrator credentials and initial login.
 
 Verified NAT/bridged networking inside VM settings.
 
-📸 Screenshot 8 — VM network adapter  
+![VM Network/Adapetr Configs](/assets/images/projects/windows-server/ws-adapter.png)
 
 ---
 
@@ -112,8 +112,8 @@ Verified NAT/bridged networking inside VM settings.
 
 Configured static IP, subnet mask, gateway, and DNS.
 
-📸 Screenshot 9 — Network settings  
-📸 Screenshot 10 — IP confirmation  
+![Server Network Adapter Settings](/assets/images/projects/windows-server/ws-network-ad.png)  
+![Static IP](/assets/images/projects/windows-server/ws-ipv4-static-ip.png)  
 
 ---
 
@@ -121,7 +121,7 @@ Configured static IP, subnet mask, gateway, and DNS.
 
 Validated network connectivity.
 
-📸 Screenshot 11 — Ping test  
+![Ping Test](/assets/images/projects/windows-server/ws-ping.png)   
 
 ---
 
@@ -131,7 +131,7 @@ Validated network connectivity.
 
 Renamed the server to reflect domain controller role.
 
-📸 Screenshot 12 — Server rename  
+![Server Rename](/assets/images/projects/windows-server/ws-rename.png)   
 
 ---
 
@@ -139,7 +139,7 @@ Renamed the server to reflect domain controller role.
 
 Restarted to apply configuration.
 
-📸 Screenshot 13 — Restart confirmation  
+![Restart to Apply Setup](/assets/images/projects/windows-server/ws14.png)  
 
 ---
 
@@ -149,8 +149,11 @@ Restarted to apply configuration.
 
 Installed Active Directory Domain Services via Server Manager.
 
-📸 Screenshot 14 — Role selection  
-📸 Screenshot 15 — Installation wizard  
+![Add Roles](/assets/images/projects/windows-server/ws-add-roles.png)  
+![AD Roles](/assets/images/projects/windows-server/ws-AD-roles-installation-page.png) 
+![Installation Type](/assets/images/projects/windows-server/ws-installation-type-select-role-based.png)  
+![Server Selection](/assets/images/projects/windows-server/ws-server-select-from-pool(SVR-LAB-TECH).png)  
+![Server Roles](/assets/images/projects/windows-server/ws-AD-Domain-Service-select.png)  
 
 ---
 
@@ -158,8 +161,9 @@ Installed Active Directory Domain Services via Server Manager.
 
 Verified successful installation.
 
-📸 Screenshot 16 — Role installation complete  
-
+![Installation](/assets/images/projects/windows-server/ws-Insatallation(AD).png) 
+![Success Install](/assets/images/projects/windows-server/ws-success-install.png)  
+![AD Installed](/assets/images/projects/windows-server/AD-installed.png)  
 ---
 
 # Phase 6 — Domain Controller Promotion
@@ -169,8 +173,8 @@ Verified successful installation.
 Created a new forest:
 
 
-📸 Screenshot 17 — Promotion wizard  
-📸 Screenshot 18 — Domain configuration  
+![Promoting Server](/assets/images/projects/windows-server/ws-promote-to-a-domain-controller.png)  
+![Deployment Config](/assets/images/projects/windows-server/ws-AD-Deployment-Configuration.png)  
 
 ---
 
