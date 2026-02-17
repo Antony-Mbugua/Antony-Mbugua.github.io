@@ -148,7 +148,7 @@ The server was configured to use its own static IP as the primary DNS server —
 
 ## Connectivity Testing
 
-Network reachability was validated using ICMP testing.
+Network reachability was validated using Ping testing.
 
 ![Ping Test](/assets/images/projects/windows-server/ws-ping.png)
 
