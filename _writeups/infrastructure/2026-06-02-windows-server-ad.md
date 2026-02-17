@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Windows Server 2025 Active Directory Deployment Lab"
 date: 2026-02-07
 layout: post
