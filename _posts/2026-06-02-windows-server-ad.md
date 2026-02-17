@@ -2,8 +2,8 @@
 layout: post
 title: "Windows Server 2025 Active Directory Deployment Lab"
 date: 2026-02-07
-categories: [Systems, Infrastructure, Writeups]
-tags: [Windows Server, Active Directory, Virtualization, DNS, Networking]
+categories: [Systems, Infrastructure]
+tags: [Windows Server, Active Directory, Virtualization, DNS, Networking, Writeups]
 image:
   path: /assets/images/projects/windows-server/ws14.png
 ---
