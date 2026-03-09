@@ -25,11 +25,9 @@ Identify a hidden flag inside a Git repository by analyzing commit history.
 
 ---
 
-## Challenge File
+### Challenge Source
 
-You can download the original challenge archive below:
-
-[Download Challenge File](/assets/files/git_challenge.zip)
+This challenge was provided by Sturtle Security Pvt Ltd as part of a Git forensics exercise.
 
 ---
 
