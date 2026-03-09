@@ -29,7 +29,7 @@ Identify a hidden flag inside a Git repository by analyzing commit history.
 
 You can download the original challenge archive below:
 
-[Download Challenge File](/assets/files/git-forensics-ctf/git_challenge.zip)
+[Download Challenge File](/assets/files/git_challenge.zip)
 
 ---
 
