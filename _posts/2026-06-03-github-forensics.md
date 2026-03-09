@@ -43,7 +43,7 @@ The archive was extracted and the repository inspected. The `.git` directory con
 
 ![Step 2](/assets/images/writeups/git-forensics/step2.png)
 
-Using `git log --oneline`, we reviewed commit history to identify suspicious commits. One commit referenced a **secrets file containing an API key**.
+Using `git log --oneline`, I reviewed commit history to identify suspicious commits. One commit referenced a **secrets file containing an API key**.
 
 ---
 
@@ -51,7 +51,7 @@ Using `git log --oneline`, we reviewed commit history to identify suspicious com
 
 ![Step 3](/assets/images/writeups/git-forensics/step3.png)
 
-Using `git show`, we examined the commit contents and discovered a hardcoded key.
+Using `git show`, I examined the commit contents and discovered a hardcoded key.
 
 ---
 
