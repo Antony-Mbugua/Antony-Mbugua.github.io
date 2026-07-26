@@ -10,13 +10,13 @@ I am a Cybersecurity enthusiast and Applied Computing finalist with a passion fo
 
 ---
 
-## Badge Wallet
+# Badge Wallet
 
 This page showcases your Credly badge wallet as a verified portfolio of digital credentials. The wallet includes 26 badges across cybersecurity, cloud, productivity, and secure infrastructure.
 
 ---
 
-## Skills Wallet
+# Skills Wallet
 
 The skills represented in this wallet include:
 - Ethical hacking and cybersecurity fundamentals
@@ -28,13 +28,13 @@ The skills represented in this wallet include:
 
 ---
 
-## Work History
+# Work History
 
 Private
 
 ---
 
-## Credly Profile
+# Credly Profile
 
 For the complete, up-to-date list of your issued badges, visit your Credly public profile:
 
@@ -42,13 +42,13 @@ For the complete, up-to-date list of your issued badges, visit your Credly publi
 
 ---
 
-## Verified Credly Badges
+# Verified Credly Badges
 
 <div class="certifications-grid">
   {% for cert in site.data.certifications.certifications %}
   <article class="cert-card">
     {% if cert.image_url %}
-    <img class="cert-image" src="{{ cert.image_url }}" alt="{{ cert.title }} badge image">
+    <img class="cert-image" src="{{ cert.image_url }}" alt="{{ cert.title }} badge image" onerror="this.onerror=null; this.src='{{ '/assets/images/certification-placeholder.svg' | relative_url }}';">
     {% endif %}
 
     <div class="cert-card-header">
@@ -72,8 +72,6 @@ For the complete, up-to-date list of your issued badges, visit your Credly publi
 </div>
 
 ---
-
-> Note: Replace the `verify_url` placeholders in `_data/certifications.yml` with your actual Credly badge links.
 
 <style>
 .certifications-grid {

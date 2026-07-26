@@ -12,7 +12,7 @@ I approach cybersecurity from a hands-on perspective — understanding how syste
 
 ---
 
-## What I Work On
+# What I Work On
 - Security monitoring, logging, and incident analysis  
 - Authentication workflows and access control  
 - System hardening and configuration security  
@@ -21,7 +21,7 @@ I approach cybersecurity from a hands-on perspective — understanding how syste
 
 ---
 
-## Goals
+# Goals
 I’m continually improving my skills in cloud security, network defense, and threat analysis. My long-term focus is to work in environments that value secure engineering, measurable impact, and continuous learning.
 
 If you’d like to collaborate or discuss a project, feel free to reach out.

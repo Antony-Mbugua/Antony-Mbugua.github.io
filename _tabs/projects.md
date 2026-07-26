@@ -11,7 +11,7 @@ Hands-on labs and infrastructure builds across cybersecurity, systems, forensics
 
 ---
 
-## Filter by Category
+# Filter by Category
 
 <div class="project-filter">
   <button class="filter-btn active" onclick="filterProjects(event, 'all')">All</button>
