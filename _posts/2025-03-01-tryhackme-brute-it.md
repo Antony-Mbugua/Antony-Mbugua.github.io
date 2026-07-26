@@ -4,8 +4,8 @@ layout: post
 collection: writeups
 permalink: /writeups/tryhackme-brute-it/
 date: 2025-01-10
-categories:  ["Writeups", "TryHackMe"]
-tags: [react, mysql, logistics]
+categories: ["Writeups", "TryHackMe"]
+tags: [react, mysql, logistics, writeups]
 image: /assets/images/writeups/brute-it/tryhackme-brute-it.png
 thumbnail: /assets/images/writeups/brute-it/tryhackme-brute-it.png
 icon: fas fa-bolt

@@ -5,7 +5,7 @@ collection: writeups
 permalink: /writeups/git-forensics-ctf/
 date: 2026-03-09
 categories: ["Writeups", "CTF"]
-tags: [git, git-forensics, secrets-discovery, incident-response, cybersecurity]
+tags: [git, git-forensics, secrets-discovery, incident-response, cybersecurity, writeups]
 image: /assets/images/writeups/git-forensics/git-forensics-cover.png
 thumbnail: /assets/images/writeups/git-forensics/git-forensics-cover.png
 icon: fas fa-code-branch

@@ -2,7 +2,7 @@
   description: "A logistics platform for dispatch, shipment tracking, driver coordination, invoicing, and workflow automation built for operational reliability."
   category: "Logistics"
   image: "/assets/images/projects/img1.png"
-  link: "/projects"
+  link: "https://github.com/Antony-Mbugua"
   tags:
     - "Laravel"
     - "React"
@@ -14,7 +14,7 @@
   description: "Practical Google Workspace deployments and productivity automations designed to improve collaboration, administration, and day-to-day efficiency."
   category: "Cloud"
   image: "/assets/images/projects/img2.jpg"
-  link: "/projects"
+  link: "https://github.com/Antony-Mbugua"
   tags:
     - "Google Workspace"
     - "Google Cloud"
@@ -36,7 +36,7 @@
   description: "Automation projects that combine OCR, document processing, and intelligent workflows to reduce manual effort and improve consistency."
   category: "AI"
   image: "/assets/images/projects/img1.png"
-  link: "/projects"
+  link: "https://github.com/Antony-Mbugua"
   tags:
     - "AI"
     - "OCR"
@@ -47,7 +47,7 @@
   description: "A practical Windows Server environment for Active Directory, networking, and domain administration learning."
   category: "Systems"
   image: "/assets/projects/windows-ad.png"
-  link: "/projects"
+  link: "https://github.com/Antony-Mbugua"
   tags:
     - "Windows Server"
     - "Active Directory"

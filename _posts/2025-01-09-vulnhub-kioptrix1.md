@@ -19,7 +19,12 @@ description: "Walkthrough of Kioptrix Level 1 VM penetration test, covering reco
 
 # Introduction
 
-**Kioptrix Level 1** is a beginner-friendly vulnerable virtual machine on VulnHub intended for practicing penetration-testing fundamentals. The objective of this walkthrough is to enumerate the machine, identify vulnerabilities, and obtain root access.
+**Kioptrix Level 1** is a beginner-friendly vulnerable machine on VulnHub designed for practicing penetration-testing fundamentals in a controlled lab environment. This walkthrough documents how I enumerated the host, identified the vulnerable service, and achieved root access through a practical exploitation path.
+
+**Quick summary**
+- **Objective:** identify the exposed service and gain root access
+- **Environment:** local lab / VulnHub VM
+- **Outcome:** successful exploitation via the Samba trans2open vulnerability
 
 ![Kioptrix Welcome Screen](/assets/images/writeups/kioptrix1/Kioptrix1.png)
 
@@ -29,7 +34,7 @@ description: "Walkthrough of Kioptrix Level 1 VM penetration test, covering reco
 
 ### Network discovery
 
-Tools used: `netdiscover`, `arp-scan`.
+Tools used: `netdiscover`, `arp-scan`, `nmap`, `nikto`, and `msfconsole`.
 
 * Target discovered at: `192.168.56.110`.
 * MAC address: `08:00:27:39:c3:0d` (VirtualBox).
@@ -39,7 +44,7 @@ Tools used: `netdiscover`, `arp-scan`.
 
 ### Port scanning
 
-Performed a full Nmap scan to enumerate services and detect the OS:
+Performed a full Nmap scan to enumerate services and identify the operating system and exposed network services:
 
 ```bash
 nmap -sS -sV -O 192.168.56.110 -oN kioptrix.txt
@@ -158,7 +163,7 @@ Captured the flag and evidence:
 
 # Conclusion
 
-Kioptrix Level 1 is an excellent introductory exercise that demonstrates how one vulnerable service (Samba) can compromise an entire system. This walkthrough documented a Metasploit-based exploitation path; alternative manual exploitation or deeper post-exploitation enumeration are great follow-ups for learning.
+Kioptrix Level 1 is an excellent introductory exercise because it shows how one vulnerable service can become the gateway to full system compromise. This walkthrough documented a Metasploit-based exploitation path and highlighted the importance of patching outdated services, maintaining good hardening practices, and approaching security testing with care and authorization.
 
 > **Ethical note:** Use these techniques only on systems you own or are authorized to test.
 

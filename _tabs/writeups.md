@@ -7,6 +7,10 @@ order: 3
 
 {% assign writeups = site.posts | where_exp: "post", "post.categories contains 'writeups'" | sort: "date" | reverse %}
 
+<div class="writeups-intro">
+  <p>Practical walkthroughs, investigations, and technical notes covering cybersecurity, infrastructure, and hands-on lab work.</p>
+</div>
+
 <div class="writeups-grid">
 
 {% if writeups.size > 0 %}
@@ -37,6 +41,15 @@ order: 3
           <i class="far fa-calendar-alt"></i>
           {{ post.date | date: "%B %d, %Y" }}
         </small>
+        {% if post.categories %}
+        <div class="writeup-categories">
+          {% for category in post.categories %}
+            {% unless category == 'Writeups' %}
+            <span>{{ category }}</span>
+            {% endunless %}
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
 
     </div>
@@ -61,11 +74,16 @@ order: 3
 
 <style>
 
+.writeups-intro{
+  margin-bottom:1.25rem;
+  color:var(--text-secondary);
+  font-size:1rem;
+}
+
 .writeups-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
   gap:24px;
-  margin-top:2rem;
 }
 
 .writeup-card{
@@ -117,6 +135,23 @@ order: 3
 .writeup-meta{
   color:var(--text-muted-color,#888);
   font-size:.9rem;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.writeup-categories{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+.writeup-categories span{
+  background:var(--tag-bg);
+  color:var(--text-secondary);
+  padding:4px 8px;
+  border-radius:999px;
+  font-size:0.78rem;
 }
 
 .no-writeups{

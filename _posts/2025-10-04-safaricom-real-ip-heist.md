@@ -5,7 +5,7 @@ collection: writeups
 permalink: /writeups/safaricom-real-ip-heist/
 date: 2025-10-04
 categories: ["Writeups", "Safaricom PwnZone"]
-tags: [web, headers, pwnzone]
+tags: [web, headers, pwnzone, writeups]
 image: /assets/images/writeups/real-ip-heist/safaricom-real-ip-heist.jpg
 thumbnail: /assets/images/writeups/real-ip-heist/safaricom-real-ip-heist.jpg
 icon: fas fa-network-wired
