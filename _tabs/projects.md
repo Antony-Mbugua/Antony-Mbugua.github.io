@@ -7,7 +7,7 @@ order: 5
 
 # 🚀 Projects
 
-Selected work spanning transportation systems, cloud and Google Workspace solutions, cybersecurity investigations, and AI-assisted automation.
+A curated selection of work spanning logistics systems, cloud and Google Workspace solutions, cybersecurity investigations, and AI-assisted automation.
 
 ---
 
@@ -30,7 +30,7 @@ Selected work spanning transportation systems, cloud and Google Workspace soluti
 <div class="project-card"
      data-category="{{ project.category }}">
 
-  <a href="{{ project.link }}" target="_blank">
+  <a href="{% if project.link contains 'http' %}{{ project.link }}{% else %}{{ project.link | relative_url }}{% endif %}" target="_blank" rel="noopener noreferrer">
 
     {% if project.image %}
     <div class="project-image">
@@ -122,25 +122,29 @@ function filterProjects(evt, category) {
 
 .project-card {
   background: var(--card-bg);
-  border-radius: 14px;
+  border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--card-shadow);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .project-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
 
 .project-card a {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
 .project-image img {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  display: block;
 }
 
 .project-content {
@@ -149,13 +153,19 @@ function filterProjects(evt, category) {
 
 .project-content h3 {
   margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.project-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .project-tags span {
   display: inline-block;
   background: var(--tag-bg);
   padding: 4px 8px;
-  border-radius: 6px;
+  border-radius: 999px;
   margin: 4px 4px 0 0;
   font-size: 0.75rem;
 }

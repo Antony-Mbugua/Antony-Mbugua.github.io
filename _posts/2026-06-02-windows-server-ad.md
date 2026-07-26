@@ -10,7 +10,7 @@ image:
 
 # Windows Server 2025 Active Directory Deployment Lab
 
-## Executive Summary
+# Executive Summary
 
 This lab demonstrates the deployment of a Windows Server 2025 Domain Controller within a virtualized environment. The objective was to simulate a real-world enterprise identity infrastructure by implementing:
 
@@ -27,7 +27,7 @@ The result is a fully functional domain controller capable of supporting central
 
 # 1. Infrastructure Architecture
 
-## Deployment Model
+# Deployment Model
 
 - **Single Forest**
 - **Single Domain**
@@ -41,13 +41,13 @@ This configuration mirrors foundational enterprise infrastructure used in small 
 
 # 2. Environment Setup
 
-## Hardware
+# Hardware
 
 - Virtualization-capable workstation  
 - Minimum 16 GB RAM  
 - SSD storage  
 
-## Software
+# Software
 
 - Hypervisor: VirtualBox / VMware  
 - Windows Server 2025 ISO (Desktop Experience)  
@@ -56,7 +56,7 @@ This configuration mirrors foundational enterprise infrastructure used in small 
 
 # 3. Virtual Machine Provisioning
 
-## Windows Server ISO Acquisition
+# Windows Server ISO Acquisition
 
 The official Windows Server 2025 evaluation ISO was downloaded directly from Microsoft.
 
@@ -66,7 +66,7 @@ The official Windows Server 2025 evaluation ISO was downloaded directly from Mic
 
 ---
 
-## Virtual Machine Creation
+# Virtual Machine Creation
 
 A new virtual machine was created with adequate compute resources to support directory services.
 
@@ -78,7 +78,7 @@ Proper resource allocation ensures stable AD DS and DNS operation.
 
 ---
 
-## ISO Mounting and Boot
+# ISO Mounting and Boot
 
 The ISO was attached to the virtual optical drive and the VM booted to begin installation.
 
@@ -90,7 +90,7 @@ The ISO was attached to the virtual optical drive and the VM booted to begin ins
 
 # 4. Windows Server Installation
 
-## OS Selection
+# OS Selection
 
 The **Desktop Experience** edition was selected to allow GUI-based administrative configuration.
 
@@ -108,7 +108,7 @@ The **Desktop Experience** edition was selected to allow GUI-based administrativ
 
 ---
 
-## Administrator Configuration
+# Administrator Configuration
 
 The local Administrator account password was configured during initial setup.
 
@@ -120,7 +120,7 @@ The local Administrator account password was configured during initial setup.
 
 # 5. Network Configuration
 
-## Virtual Network Adapter Verification
+# Virtual Network Adapter Verification
 
 The VM network adapter was configured to ensure connectivity between the server and host network.
 
@@ -130,7 +130,7 @@ The VM network adapter was configured to ensure connectivity between the server 
 
 ---
 
-## Static IP Address Assignment
+# Static IP Address Assignment
 
 Domain Controllers require static IP addressing to ensure consistent DNS resolution and service discovery.
 
@@ -146,7 +146,7 @@ The server was configured to use its own static IP as the primary DNS server —
 
 ---
 
-## Connectivity Testing
+# Connectivity Testing
 
 Network reachability was validated using Ping testing.
 
@@ -158,7 +158,7 @@ Network reachability was validated using Ping testing.
 
 # 6. Server Preparation
 
-## Hostname Configuration
+# Hostname Configuration
 
 The server was renamed to reflect its infrastructure role.
 
@@ -168,7 +168,7 @@ The server was renamed to reflect its infrastructure role.
 
 ---
 
-## Restart to Apply Changes
+# Restart to Apply Changes
 
 A restart was performed to apply hostname and network modifications.
 
@@ -180,7 +180,7 @@ A restart was performed to apply hostname and network modifications.
 
 # 7. Active Directory Installation
 
-## Adding Roles and Features
+# Adding Roles and Features
 
 Active Directory Domain Services (AD DS) was installed using Server Manager.
 
@@ -200,7 +200,7 @@ Active Directory Domain Services (AD DS) was installed using Server Manager.
 
 # 8. Domain Controller Promotion
 
-## Forest Creation
+# Forest Creation
 
 The server was promoted as the first Domain Controller in a new forest.
 
@@ -214,7 +214,7 @@ The server was promoted as the first Domain Controller in a new forest.
 
 ---
 
-## Directory Services Restore Mode (DSRM)
+# Directory Services Restore Mode (DSRM)
 
 A DSRM password was configured for offline Active Directory maintenance and disaster recovery.
 
@@ -224,7 +224,7 @@ A DSRM password was configured for offline Active Directory maintenance and disa
 
 ---
 
-## Prerequisite Validation & Promotion
+# Prerequisite Validation & Promotion
 
 The system performed prerequisite checks to validate DNS configuration and forest readiness.
 
@@ -236,7 +236,7 @@ After successful validation, the server was promoted to Domain Controller.
 
 ---
 
-## Post-Promotion Reboot
+# Post-Promotion Reboot
 
 The system automatically rebooted to complete AD initialization.
 
@@ -252,7 +252,7 @@ The system automatically rebooted to complete AD initialization.
 
 # 9. Active Directory Verification
 
-## Active Directory Users and Computers
+# Active Directory Users and Computers
 
 The ADUC console was opened to verify domain structure.
 
@@ -262,7 +262,7 @@ The ADUC console was opened to verify domain structure.
 
 ---
 
-## Domain Structure Validation
+# Domain Structure Validation
 
 Default containers and built-in security groups were verified.
 
@@ -272,7 +272,7 @@ Default containers and built-in security groups were verified.
 
 ---
 
-## Test User Creation
+# Test User Creation
 
 A sample domain user "Antony Githinji" was created to validate directory functionality.
 
@@ -300,7 +300,7 @@ After Allowing the option.
 
 ---
 
-## Organizational Units (Optional)
+# Organizational Units (Optional)
 
 Custom OUs were created to simulate a real-world structure:
 
@@ -314,7 +314,7 @@ Custom OUs were created to simulate a real-world structure:
 
 ---
 
-## DNS Configuration Validation
+# DNS Configuration Validation
 
 DNS Manager was opened to confirm correct zone creation and SRV records:
 
@@ -331,7 +331,7 @@ DNS Manager was opened to confirm correct zone creation and SRV records:
 
 ---
 
-## SYSVOL & NETLOGON Share Verification
+# SYSVOL & NETLOGON Share Verification
 
 Domain shares were verified:
 
@@ -343,7 +343,7 @@ Expected shares: SYSVOL, NETLOGON
 
 ---
 
-## FSMO Role Verification
+# FSMO Role Verification
 
 FSMO roles were verified using:
 
@@ -355,7 +355,7 @@ All roles confirmed assigned to the DC.
 
 ---
 
-## Group Policy Management (GPMC)
+# Group Policy Management (GPMC)
 
 The Group Policy Management Console was accessed to confirm policy administration capability.
 
@@ -370,7 +370,7 @@ The Group Policy Management Console was accessed to confirm policy administratio
 
 # 10. Service & Health Validation
 
-## Network Troubleshooting
+# Network Troubleshooting
 
 Network configuration was verified and connectivity issues resolved:
 
@@ -379,7 +379,7 @@ Network configuration was verified and connectivity issues resolved:
 
 ---
 
-## Service Verification
+# Service Verification
 
 Critical services were verified:
 
@@ -393,7 +393,7 @@ Critical services were verified:
 
 ---
 
-## Final Validation
+# Final Validation
 
 Domain functionality was confirmed through:
 

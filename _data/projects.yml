@@ -1,5 +1,5 @@
 - title: "Transportation Management System (TMS)"
-  description: "A logistics platform for dispatch, shipment tracking, driver coordination, invoicing, and workflow automation."
+  description: "A logistics platform for dispatch, shipment tracking, driver coordination, invoicing, and workflow automation built for operational reliability."
   category: "Logistics"
   image: "/assets/images/projects/img1.png"
   link: "/projects"
@@ -11,7 +11,7 @@
     - "Automation"
 
 - title: "Google Workspace Solutions & Automation"
-  description: "Practical Google Workspace deployments and productivity automations focused on collaboration, administration, and operational efficiency."
+  description: "Practical Google Workspace deployments and productivity automations designed to improve collaboration, administration, and day-to-day efficiency."
   category: "Cloud"
   image: "/assets/images/projects/img2.jpg"
   link: "/projects"
@@ -22,7 +22,7 @@
     - "Admin"
 
 - title: "Cybersecurity Writeups & Lab Notes"
-  description: "Hands-on security writeups covering vulnerability analysis, threat detection, forensics notes, and walkthroughs from practical labs."
+  description: "Hands-on security writeups covering vulnerability analysis, threat detection, forensics notes, and practical lab walkthroughs."
   category: "Cybersecurity"
   image: "/assets/images/projects/img5.jpg"
   link: "/writeups"
@@ -44,7 +44,7 @@
     - "Automation"
 
 - title: "Windows Server Active Directory Lab"
-  description: "Deployment of a Windows Server environment with Active Directory, networking, and domain administration for practical systems learning."
+  description: "A practical Windows Server environment for Active Directory, networking, and domain administration learning."
   category: "Systems"
   image: "/assets/projects/windows-ad.png"
   link: "/projects"

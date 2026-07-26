@@ -17,7 +17,7 @@ description: "Walkthrough of Kioptrix Level 1 VM penetration test, covering reco
 
 # Kioptrix Level 1 — Walkthrough
 
-## Introduction
+# Introduction
 
 **Kioptrix Level 1** is a beginner-friendly vulnerable virtual machine on VulnHub intended for practicing penetration-testing fundamentals. The objective of this walkthrough is to enumerate the machine, identify vulnerabilities, and obtain root access.
 
@@ -25,7 +25,7 @@ description: "Walkthrough of Kioptrix Level 1 VM penetration test, covering reco
 
 ---
 
-## Reconnaissance
+# Reconnaissance
 
 ### Network discovery
 
@@ -58,7 +58,7 @@ nmap -sS -sV -O 192.168.56.110 -oN kioptrix.txt
 
 ---
 
-## Vulnerability analysis
+# Vulnerability analysis
 
 ### Web service enumeration
 
@@ -85,7 +85,7 @@ nikto -h http://192.168.56.110
 
 ---
 
-## Exploitation
+# Exploitation
 
 ### Metasploit approach (trans2open)
 
@@ -111,7 +111,7 @@ run
 
 ---
 
-## Post-exploitation
+# Post-exploitation
 
 After gaining a shell, verified root privileges and enumerated the system:
 
@@ -130,7 +130,7 @@ Captured the flag and evidence:
 
 ---
 
-## Key findings
+# Key findings
 
 ### Critical vulnerabilities
 
@@ -148,7 +148,7 @@ Captured the flag and evidence:
 
 ---
 
-## Lessons learned
+# Lessons learned
 
 * Regular patching and updates are critical — a single unpatched service can lead to full system compromise.
 * Legacy Samba versions are high-risk and have been exploited in the wild for years.
@@ -156,7 +156,7 @@ Captured the flag and evidence:
 
 ---
 
-## Conclusion
+# Conclusion
 
 Kioptrix Level 1 is an excellent introductory exercise that demonstrates how one vulnerable service (Samba) can compromise an entire system. This walkthrough documented a Metasploit-based exploitation path; alternative manual exploitation or deeper post-exploitation enumeration are great follow-ups for learning.
 
@@ -164,7 +164,7 @@ Kioptrix Level 1 is an excellent introductory exercise that demonstrates how one
 
 ---
 
-## References & Resources
+# References & Resources
 
 * Kioptrix VM (VulnHub)
 * Samba trans2open (CVE-2003-0201)

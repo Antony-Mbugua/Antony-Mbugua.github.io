@@ -17,7 +17,7 @@ description: "Exploit of server trusting client-supplied X-Forwarded-For/X-Real-
 
 # Real IP Heist — Challenge Writeup
 
-## Challenge Overview
+# Challenge Overview
 
 * **Challenge Name:** Real IP Heist
 * **Target URL:** `http://54.72.82.22:8085`
@@ -25,7 +25,7 @@ description: "Exploit of server trusting client-supplied X-Forwarded-For/X-Real-
 
 ---
 
-## Step-by-Step Solution
+# Step-by-Step Solution
 
 ### 1. Initial Reconnaissance
 
@@ -92,7 +92,7 @@ curl -X GET 'http://54.72.82.22:8085/admin' \
 
 ![Page Source Screenshot](/assets/images/writeups/real-ip-heist/Curl.png)
 
-## Vulnerability Analysis
+# Vulnerability Analysis
 
 **Critical Security Flaw:** The application trusted client-supplied headers for authentication decisions.
 
@@ -103,7 +103,7 @@ curl -X GET 'http://54.72.82.22:8085/admin' \
 * `access_level` parameter was vulnerable to direct manipulation.
 * Client-side restrictions provided a false sense of security.
 
-## Flag
+# Flag
 
 ```
 safctf{c0f1ec1fccb2de4a03031037251f21a7}
@@ -111,7 +111,7 @@ safctf{c0f1ec1fccb2de4a03031037251f21a7}
 
 ![Page Source Screenshot](/assets/images/writeups/real-ip-heist/Flag.png)
 
-## Key Takeaways
+# Key Takeaways
 
 * Never trust client-supplied headers for security decisions.
 * Client-side restrictions are easily bypassed and should not be relied upon for access control.
@@ -119,7 +119,7 @@ safctf{c0f1ec1fccb2de4a03031037251f21a7}
 * IP-based authentication can be vulnerable to header injection attacks.
 * Security through obscurity (hidden admin endpoints) is not effective protection.
 
-## Remediation Recommendations (brief)
+# Remediation Recommendations (brief)
 
 1. Do not rely on `X-Forwarded-For` or other client-controllable headers for trust decisions. Implement server-side checks using trusted sources (e.g., internal firewall, verified reverse proxy that strips/sets these headers).
 2. Validate and enforce `access_level` server-side; do not accept privilege escalation via POST parameters.
@@ -129,7 +129,7 @@ safctf{c0f1ec1fccb2de4a03031037251f21a7}
 
 ---
 
-## Notes
+# Notes
 
 * All testing described above was performed in the context of the CTF challenge as provided by the target URL.
 

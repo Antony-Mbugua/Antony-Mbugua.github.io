@@ -17,18 +17,18 @@ description: "Hydra brute-force against an admin panel, SSH key crack with john,
 
 ![Brute It Screenshot](/assets/images/writeups/brute-it/tryhackme-brute-it.png)
 
-## 🧠 Target
+# 🧠 Target
 - Brute-force login credentials over SSH  
 - Hash cracking  
 - Privilege escalation
 
-## 🛠 Tools Used
+# 🛠 Tools Used
 - Hydra  
 - Nmap  
 - John the Ripper  
 - Kali Linux
 
-## 🧭 Steps
+# 🧭 Steps
 
 ### Step 1 — Deployed the target machine
 Target IP: `10.10.34.33`  
@@ -118,14 +118,14 @@ Root flag: `THM{pr1v1l3g3_3sc4l4t10n}`
 
 ---
 
-## 📘 Lessons Learned
+# 📘 Lessons Learned
 - Enforce account lockout and rate-limiting (prevent brute-force).  
 - Use multi-factor authentication or SSH key policies.  
 - Avoid guessable credentials and default accounts.
 
 ---
 
-## Notes / Artifacts
+# Notes / Artifacts
 - Commands used and screenshots are included above.  
 - Sanitize any client screenshots before publishing publicly.
 

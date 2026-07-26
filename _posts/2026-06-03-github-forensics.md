@@ -15,10 +15,10 @@ description: "A Git forensics challenge demonstrating how sensitive credentials 
 
 # Git Forensics CTF Writeup
 
-## Objective
+# Objective
 Identify a hidden flag inside a Git repository by analyzing commit history.
 
-## Tools Used
+# Tools Used
 - Git
 - Linux Terminal
 - Basic Git Forensics Techniques
@@ -31,7 +31,7 @@ This challenge was provided by Sturtle Security Pvt Ltd as part of a Git forensi
 
 ---
 
-## Step 1: Extract the Challenge Files
+# Step 1: Extract the Challenge Files
 
 ![Step 1](/assets/images/writeups/git-forensics/step1.png)
 
@@ -39,7 +39,7 @@ The archive was extracted and the repository inspected. The `.git` directory con
 
 ---
 
-## Step 2: Inspect Commit History
+# Step 2: Inspect Commit History
 
 ![Step 2](/assets/images/writeups/git-forensics/step2.png)
 
@@ -47,7 +47,7 @@ Using `git log --oneline`, I reviewed commit history to identify suspicious comm
 
 ---
 
-## Step 3: Inspect the Commit Contents
+# Step 3: Inspect the Commit Contents
 
 ![Step 3](/assets/images/writeups/git-forensics/step3.png)
 
@@ -55,12 +55,12 @@ Using `git show`, I examined the commit contents and discovered a hardcoded key.
 
 ---
 
-## Captured Flag
+# Captured Flag
 
 
 ---
 
-## Security Lesson
+# Security Lesson
 
 This challenge demonstrates a common security mistake where developers commit sensitive credentials into Git repositories. Even if removed later, Git history still preserves the data.
 
@@ -73,6 +73,6 @@ Attackers frequently analyze repository history to recover leaked secrets.
 
 ---
 
-## Author
+# Author
 Antony Mbugua Githinji  
 Cybersecurity Enthusiast | Cloud & Network Security | SOC & SIEM
