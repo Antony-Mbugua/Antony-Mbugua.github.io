@@ -5,41 +5,57 @@ icon: fas fa-file-alt
 order: 3
 ---
 
-{% assign writeups = site.writeups | default: empty | sort: "date" | reverse %}
+{% assign writeups = site.posts | where_exp: "post", "post.categories contains 'writeups'" | sort: "date" | reverse %}
 
 <div class="writeups-grid">
 
-  {% if writeups.size > 0 %}
+{% if writeups.size > 0 %}
 
-    {% for post in writeups %}
+  {% for post in writeups %}
 
-    <a href="{{ post.url | relative_url }}" class="writeup-card">
+  <a href="{{ post.url | relative_url }}" class="writeup-card">
 
-      <div class="card-image"
-           style="background-image: url('{% if post.image %}{{ post.image | relative_url }}{% else %}{{ '/assets/images/default-writeup.png' | relative_url }}{% endif %}');">
+    <div class="card-image"
+         style="background-image: url('{% if post.image %}{{ post.image | relative_url }}{% else %}{{ '/assets/images/default-writeup.png' | relative_url }}{% endif %}');">
 
-        <div class="card-title-overlay">
-          <h3>{{ post.title }}</h3>
-        </div>
-
+      <div class="card-title-overlay">
+        <h3>{{ post.title }}</h3>
       </div>
 
-      <div class="card-content">
-        <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
-      </div>
-
-    </a>
-
-    {% endfor %}
-
-  {% else %}
-
-    <div class="no-writeups">
-      <h2>No writeups yet.</h2>
-      <p>Your cybersecurity writeups will appear here once you add files to the <code>_writeups</code> collection.</p>
     </div>
 
-  {% endif %}
+    <div class="card-content">
+
+      {% if post.description %}
+        <p>{{ post.description | truncate: 100 }}</p>
+      {% else %}
+        <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+      {% endif %}
+
+      <div class="writeup-meta">
+        <small>
+          <i class="far fa-calendar-alt"></i>
+          {{ post.date | date: "%B %d, %Y" }}
+        </small>
+      </div>
+
+    </div>
+
+  </a>
+
+  {% endfor %}
+
+{% else %}
+
+<div class="no-writeups">
+  <i class="fas fa-folder-open fa-3x"></i>
+  <h2>No writeups found</h2>
+  <p>
+    Add <code>categories: [writeups]</code> to your writeup posts to have them appear here.
+  </p>
+</div>
+
+{% endif %}
 
 </div>
 
@@ -47,7 +63,7 @@ order: 3
 
 .writeups-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
   gap:24px;
   margin-top:2rem;
 }
@@ -55,21 +71,22 @@ order: 3
 .writeup-card{
   display:flex;
   flex-direction:column;
-  overflow:hidden;
-  border-radius:12px;
   text-decoration:none;
+  color:inherit;
+  overflow:hidden;
+  border-radius:14px;
   background:var(--card-bg,#fff);
-  border:1px solid rgba(0,0,0,.08);
-  transition:.25s;
+  border:1px solid rgba(128,128,128,.15);
+  transition:all .25s ease;
 }
 
 .writeup-card:hover{
   transform:translateY(-5px);
-  box-shadow:0 12px 28px rgba(0,0,0,.18);
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
 }
 
 .card-image{
-  height:190px;
+  height:200px;
   background-size:cover;
   background-position:center;
   display:flex;
@@ -78,7 +95,7 @@ order: 3
 
 .card-title-overlay{
   width:100%;
-  padding:12px 16px;
+  padding:14px;
   background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.15));
 }
 
@@ -93,15 +110,30 @@ order: 3
 }
 
 .card-content p{
-  margin:0;
-  color:var(--text-muted-color,#777);
+  margin-bottom:12px;
   line-height:1.6;
+}
+
+.writeup-meta{
+  color:var(--text-muted-color,#888);
+  font-size:.9rem;
 }
 
 .no-writeups{
   grid-column:1/-1;
   text-align:center;
-  padding:60px 20px;
+  padding:70px 20px;
+}
+
+.no-writeups i{
+  margin-bottom:20px;
+  opacity:.5;
+}
+
+.no-writeups code{
+  background:rgba(127,127,127,.15);
+  padding:2px 6px;
+  border-radius:4px;
 }
 
 </style>
