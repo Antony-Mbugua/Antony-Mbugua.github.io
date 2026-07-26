@@ -37,6 +37,14 @@ This repository is automatically updated with new releases from the theme reposi
 
 This work is published under [MIT][mit] License.
 
+## Site Maintenance
+
+- Add a new certification by editing `_data/certifications.yml` and adding a new item to the `certifications` list.
+- Update the certification page layout in `_tabs/certifications.md` if you want a new display style.
+- Add project entries in `_data/projects.yml`; these are rendered by `_tabs/projects.md`.
+- Add writeups as Markdown files in `_posts/` with `collection: writeups` and `categories: ["Writeups", ...]` in the front matter.
+- Keep the writeup category lookup consistent by using `site.categories.writeups` in `_tabs/writeups.md` and `index.html`.
+
 [gem]: https://rubygems.org/gems/jekyll-theme-chirpy
 [chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
 [CD]: https://en.wikipedia.org/wiki/Continuous_deployment

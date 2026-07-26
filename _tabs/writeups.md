@@ -5,7 +5,7 @@ order: 3
 ---
 
 <div class="writeups-grid">
-  {% assign writeups = site.categories.Writeups | sort: 'date' | reverse %}
+  {% assign writeups = site.categories.writeups | sort: 'date' | reverse %}
   {% for post in writeups %}
   <a href="{{ post.url }}" class="writeup-card">
     <div class="card-image" style="background-image: url({% if post.image %}{{ post.image }}{% else %}/assets/images/default-writeup.png{% endif %});">

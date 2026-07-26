@@ -14,12 +14,12 @@ Hands-on labs and infrastructure builds across cybersecurity, systems, forensics
 ## Filter by Category
 
 <div class="project-filter">
-  <button class="filter-btn active" onclick="filterProjects('all')">All</button>
-  <button class="filter-btn" onclick="filterProjects('Cybersecurity')">Cybersecurity</button>
-  <button class="filter-btn" onclick="filterProjects('Forensics')">Forensics</button>
-  <button class="filter-btn" onclick="filterProjects('Information Security')">Information Security</button>
-  <button class="filter-btn" onclick="filterProjects('Systems')">Systems</button>
-  <button class="filter-btn" onclick="filterProjects('Logistics')">Logistics</button>
+  <button class="filter-btn active" onclick="filterProjects(event, 'all')">All</button>
+  <button class="filter-btn" onclick="filterProjects(event, 'Cybersecurity')">Cybersecurity</button>
+  <button class="filter-btn" onclick="filterProjects(event, 'Forensics')">Forensics</button>
+  <button class="filter-btn" onclick="filterProjects(event, 'Information Security')">Information Security</button>
+  <button class="filter-btn" onclick="filterProjects(event, 'Systems')">Systems</button>
+  <button class="filter-btn" onclick="filterProjects(event, 'Logistics')">Logistics</button>
 </div>
 
 ---
@@ -59,13 +59,12 @@ Hands-on labs and infrastructure builds across cybersecurity, systems, forensics
 ---
 
 <script>
-function filterProjects(category) {
-
+function filterProjects(evt, category) {
   const cards = document.querySelectorAll(".project-card");
   const buttons = document.querySelectorAll(".filter-btn");
 
   buttons.forEach(btn => btn.classList.remove("active"));
-  event.target.classList.add("active");
+  evt.currentTarget.classList.add("active");
 
   cards.forEach(card => {
     const cardCat = card.dataset.category;

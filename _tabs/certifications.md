@@ -4,97 +4,132 @@ icon: fas fa-certificate
 order: 5
 ---
 
-# 🎓 Certifications
+# ?? Certifications
 
-This page lists my verified digital credentials from recognized organizations.  
-Each certification includes a link where anyone can independently confirm its authenticity.
-
----
-
-## 🔗 Credly Profile (All Badges)
-For a complete, up-to-date list of my issued badges, visit my Credly public profile:
-
-➡️ **[View My Credly Profile](https://www.credly.com/users/antonymbugua742.9c238788)**
+I am a Cybersecurity enthusiast and Applied Computing finalist with a passion for ethical hacking, digital forensics, and secure system design. I actively build skills through hands-on labs, certifications, and real-world projects.
 
 ---
 
-# ✅ Verified Certifications
+## Badge Wallet
 
-Below are the credentials I have earned from Cisco, ISC2, SAP, OPSWAT, and APIsec University.
-
-Each entry includes:
-- Issuer  
-- Issue date  
-- Expiry (if any)  
-- Credential ID  
-- A verification link  
-
+This page showcases your Credly badge wallet as a verified portfolio of digital credentials. The wallet includes 26 badges across cybersecurity, cloud, productivity, and secure infrastructure.
 
 ---
 
-## 🛡 Introduction to Cybersecurity  
-**Issuer:** Cisco  
-**Issued:** May 22, 2025  
-**Expires:** Does not expire  
-**Credential ID:** 1a6cf897-80c2-447f-ae59-75795df6d5d6  
-**Verify:** [View Badge](#)  
-> Cisco confirms the holder completed the Introduction to Cybersecurity program, demonstrating foundational security knowledge.
+## Skills Wallet
+
+The skills represented in this wallet include:
+- Ethical hacking and cybersecurity fundamentals
+- Network security and technical troubleshooting
+- Cloud security, agent development, and Google Workspace productivity
+- API security and secure application design
+- Identity federation, SSO, and Active Directory security
+- Critical infrastructure protection and secure system deployment
 
 ---
 
-## 🛠 Network Technician Career Path  
-**Issuer:** Cisco  
-**Issued:** March 27, 2024  
-**Expires:** Does not expire  
-**Credential ID:** 075196e7-ceee-4daa-a08b-8004a4ffa50f  
-**Verify:** [View Badge](#)  
-> Validates completion of the Cisco Network Technician pathway, covering essential networking concepts and troubleshooting skills.
+## Work History
+
+Private
 
 ---
 
-## 🔐 API Security Fundamentals ’25  
-**Issuer:** APIsec University  
-**Issued:** October 10, 2025  
-**Expires:** Does not expire  
-**Credential ID:** cbcd92a1-ad94-43b3-a2e7-21dee505f955  
-**Verify:** [View Badge](#)  
-> Demonstrates understanding of core API threats, mitigation techniques, and modern API security practices.
+## Credly Profile
+
+For the complete, up-to-date list of your issued badges, visit your Credly public profile:
+
+?? **[View My Credly Profile]({{ site.data.certifications.credly_profile }})**
 
 ---
 
-## 🧩 Introducing Cybersecurity — Record of Achievement  
-**Issuer:** SAP  
-**Issued:** May 24, 2025  
-**Expires:** Does not expire  
-**Credential ID:** 37bb6c23-5530-43fb-a40e-8929857b8ddf  
-**Verify:** [View Badge](#)  
-> Recognizes completion of SAP’s cybersecurity fundamentals learning path.
+## Verified Credly Badges
+
+<div class="certifications-grid">
+  {% for cert in site.data.certifications.certifications %}
+  <article class="cert-card">
+    {% if cert.image_url %}
+    <img class="cert-image" src="{{ cert.image_url }}" alt="{{ cert.title }} badge image">
+    {% endif %}
+
+    <div class="cert-card-header">
+      <div>
+        <h3>{{ cert.title }}</h3>
+        <p class="cert-issuer">{{ cert.issuer }}</p>
+      </div>
+      {% if cert.verify_url %}
+      <a href="{{ cert.verify_url }}" target="_blank" rel="noopener" class="cert-link">Verify</a>
+      {% endif %}
+    </div>
+
+    <p>{{ cert.description }}</p>
+
+    <div class="cert-meta">
+      {% if cert.issued %}<span><strong>Issued:</strong> {{ cert.issued }}</span>{% endif %}
+      {% if cert.expires %}<span><strong>Expires:</strong> {{ cert.expires }}</span>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
 
 ---
 
-## 🛡 ISC2 Candidate  
-**Issuer:** ISC2  
-**Issued:** May 23, 2025  
-**Expires:** May 31, 2026  
-**Credential ID:** 56a6760d-93e8-45c9-a27a-44d3b29c9224  
-**Verify:** [View Badge](#)  
-> Indicates active membership as an ISC2 Candidate, aligned with professional development toward certifications like CC, Security+, or CISSP.
+> Note: Replace the `verify_url` placeholders in `_data/certifications.yml` with your actual Credly badge links.
 
----
+<style>
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+  margin-top: 20px;
+}
 
-## 🏛 OPSWAT Introduction to Critical Infrastructure Protection (ICIP)  
-**Issuer:** OPSWAT  
-**Issued:** May 24, 2025  
-**Expires:** May 24, 2026  
-**Credential ID:** 1e6ca466-e98c-4e06-a030-c1f0712475aa  
-**Verify:** [View Badge](#)  
-> Covers fundamentals of securing critical infrastructure environments and operational technology (OT) systems.
+.cert-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
----
+.cert-image {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  background: #f9f9f9;
+}
 
+.cert-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
 
-Thank you for viewing my certifications.  
-If you need direct confirmation or transcripts, feel free to contact me:
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--btn-primary-bg);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
 
-📧 **antonymbugua742@gmail.com**
+.cert-issuer {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
 
+.cert-meta {
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+</style>
