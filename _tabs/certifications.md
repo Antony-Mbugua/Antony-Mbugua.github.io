@@ -4,15 +4,15 @@ icon: fas fa-certificate
 order: 5
 ---
 
-# ?? Certifications
+# Certifications
 
-I am a Cybersecurity enthusiast and Applied Computing finalist with a passion for ethical hacking, digital forensics, and secure system design. I actively build skills through hands-on labs, certifications, and real-world projects.
+I am a Cloud Engineer and cybersecurity professional building practical expertise across cloud platforms, secure systems, and modern development workflows. These credentials reflect my hands-on growth in cybersecurity, infrastructure, productivity tools, and professional development.
 
 ---
 
 # Badge Wallet
 
-This page showcases your Credly badge wallet as a verified portfolio of digital credentials. The wallet includes 26 badges across cybersecurity, cloud, productivity, and secure infrastructure.
+This page showcases my Credly badge wallet as a verified portfolio of digital credentials. The collection reflects work across cybersecurity, cloud engineering, productivity platforms, and secure infrastructure.
 
 ---
 
@@ -38,7 +38,7 @@ Private
 
 For the complete, up-to-date list of your issued badges, visit your Credly public profile:
 
-?? **[View My Credly Profile]({{ site.data.certifications.credly_profile }})**
+**[View My Credly Profile]({{ site.data.certifications.credly_profile }})**
 
 ---
 
@@ -48,7 +48,7 @@ For the complete, up-to-date list of your issued badges, visit your Credly publi
   {% for cert in site.data.certifications.certifications %}
   <article class="cert-card">
     {% if cert.image_url %}
-    <img class="cert-image" src="{{ cert.image_url }}" alt="{{ cert.title }} badge image" onerror="this.onerror=null; this.src='{{ '/assets/images/certification-placeholder.svg' | relative_url }}';">
+    <img class="cert-image" src="{{ cert.image_url }}" alt="{{ cert.title }} badge image" loading="lazy" onerror="this.onerror=null; this.src='{{ '/assets/images/certification-placeholder.svg' | relative_url }}';">
     {% endif %}
 
     <div class="cert-card-header">
@@ -95,9 +95,10 @@ For the complete, up-to-date list of your issued badges, visit your Credly publi
 .cert-image {
   width: 100%;
   border-radius: 14px;
-  object-fit: cover;
+  object-fit: contain;
   aspect-ratio: 16 / 9;
-  background: #f9f9f9;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  min-height: 180px;
 }
 
 .cert-card-header {

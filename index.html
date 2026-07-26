@@ -3,52 +3,75 @@ layout: page
 ---
 
 <div class="home-content">
+  <section class="hero-card">
+    <p class="eyebrow">Cloud Engineer • Cybersecurity Professional • Full-Stack Developer</p>
+    <h1>Building secure, scalable solutions for modern teams.</h1>
+    <p>I combine cloud engineering, systems support, cybersecurity practice, and full-stack development to create practical tools and reliable digital operations.</p>
+    <div class="hero-links">
+      <a href="/about">About Me</a>
+      <a href="/projects">Projects</a>
+      <a href="/certifications">Certifications</a>
+      <a href="https://github.com/Antony-Mbugua" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
 
-  <h1>👋 Welcome</h1>
-  <p style="font-size: 1.25rem; line-height: 1.7;">
-    This space highlights my work in applied computing and cybersecurity. I focus on practical security, system reliability, and building tools that solve real operational challenges.
-  </p>
+  <section class="info-grid">
+    <div class="info-card">
+      <h2>🚀 Featured Work</h2>
+      <ul>
+        <li>Transportation Management System (TMS) for logistics operations</li>
+        <li>Cybersecurity writeups and practical investigations</li>
+        <li>Google Workspace and cloud-based automation solutions</li>
+        <li>AI/OCR automation projects for document and workflow optimization</li>
+      </ul>
+    </div>
 
-  <hr/>
+    <div class="info-card">
+      <h2>🧠 Core Skills</h2>
+      <div class="tag-list">
+        <span>Google Cloud</span>
+        <span>Google Workspace</span>
+        <span>Cybersecurity</span>
+        <span>Laravel</span>
+        <span>PHP</span>
+        <span>Python</span>
+        <span>React</span>
+        <span>AI Automation</span>
+        <span>Systems Administration</span>
+      </div>
+    </div>
+  </section>
 
-  <h2>🚀 Featured Projects</h2>
-  <ul>
-    <li>🛡 <a href="/projects">Transport Management System (TMS)</a> — A full-stack platform with secure authentication, expense tracking, and SIEM-style logging.</li>
-    <li>🔍 <a href="/writeups">Cybersecurity Writeups</a> — Notes and walkthroughs from HackTheBox and TryHackMe labs.</li>
-    <li>☁ <a href="/projects">Self-Hosted Nextcloud</a> — Internal cloud platform for secure file management.</li>
-  </ul>
+  <section class="info-card">
+    <h2>📝 Recent Writeups</h2>
+    <ul>
+      {% assign posts = site.categories.writeups | slice: 0, 3 %}
+      {% for post in posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
 
-  <hr/>
-
-  <h2>📝 Recent Writeups</h2>
-  <ul>
-    {% assign posts = site.categories.writeups | slice: 0, 3 %}
-    {% for post in posts %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-
-  <hr/>
-
-<h2>📢 Latest Updates</h2>
-<ul>
-  <li>🎓 Completed BSc in Applied Computing (Information Security & Forensics).</li>
-  <li>⚙️ Expanding the Transport Management System with improved authentication, logging, and secure workflows.</li>
-  <li>🔐 Supporting organizations with cybersecurity tasks and secure system deployment.</li>
-  <li>📚 Deepening skills in cloud security, SOC analysis, and secure API development.</li>
-  <li>🧪 Conducting ongoing security testing across personal and client projects to strengthen practical expertise.</li>
-</ul>
-
-
-  <hr/>
-
-  <h2>📂 Explore</h2>
-  <ul>
-    <li><a href="/about">About Me</a></li>
-    <li><a href="/certifications">Certifications</a></li>
-    <li><a href="/projects">Projects</a></li>
-    <li><a href="/writeups">Writeups</a></li>
-    <li><a href="/categories">Categories</a></li>
-    <li><a href="/tags">Tags</a></li>
-  </ul>
+  <section class="info-card">
+    <h2>📂 Explore</h2>
+    <ul>
+      <li><a href="/about">About Me</a></li>
+      <li><a href="/certifications">Certifications</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/writeups">Writeups</a></li>
+      <li><a href="/categories">Categories</a></li>
+      <li><a href="/tags">Tags</a></li>
+    </ul>
+  </section>
 </div>
+
+<style>
+.home-content { display: grid; gap: 20px; }
+.hero-card, .info-card { background: var(--card-bg); border-radius: 20px; padding: 24px; box-shadow: var(--card-shadow); }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.hero-links a { display: inline-block; padding: 8px 12px; border-radius: 999px; background: var(--btn-primary-bg); color: white; text-decoration: none; }
+.info-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.tag-list span { padding: 6px 10px; border-radius: 999px; background: var(--tag-bg); font-size: 0.85rem; }
+</style>

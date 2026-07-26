@@ -5,24 +5,30 @@ order: 4
 
 # About Me
 
-I’m Antony Mbugua Githinji, an Applied Computing graduate specializing in Information Security and Forensics.  
-My work focuses on building reliable systems and applying practical security controls that strengthen how organizations handle data, access, and operations.
+I’m Antony Mbugua Githinji, a Cloud Engineer, Cybersecurity Professional, and Full-Stack Developer with experience spanning cloud operations, systems administration, secure application development, and IT support.
 
-I approach cybersecurity from a hands-on perspective — understanding how systems are built, where weaknesses normally appear, and how security can be integrated without disrupting usability. I value accuracy, clear documentation, and solutions that can be maintained over time.
+My work combines practical engineering with strong security awareness. I build reliable solutions for modern teams, support day-to-day operations in fast-moving environments, and create web-based tools that improve efficiency, visibility, and security.
 
----
+## Professional Experience
+- Cloud Engineer – Graduate Trainee at Pawa IT Solutions
+- IT Support Associate at Digital Divide Data
+- IT Support Officer at Mathari National Teaching & Referral Hospital
+- Truck Dispatcher & ICT Support Officer at All Over Logistics LLC
 
-# What I Work On
-- Security monitoring, logging, and incident analysis  
-- Authentication workflows and access control  
-- System hardening and configuration security  
-- Application development using React, Laravel, and Node.js  
-- Database and API design with MySQL
+## Core Expertise
+- Google Cloud and Google Workspace administration
+- Cybersecurity operations, hardening, and incident response support
+- Laravel, PHP, Python, React, and AI automation
+- Systems administration, IT support, and operational tooling
+- Transport management systems, OCR automation, and workflow optimization
 
----
+## Focus Areas
+- Cloud engineering and modern infrastructure support
+- Secure application delivery and systems optimization
+- Full-stack development for business operations and logistics workflows
+- Documentation, technical support, and cross-functional collaboration
 
-# Goals
-I’m continually improving my skills in cloud security, network defense, and threat analysis. My long-term focus is to work in environments that value secure engineering, measurable impact, and continuous learning.
+I’m continually strengthening my skills in cloud engineering, cybersecurity, and modern software delivery while building practical solutions that create measurable value.
 
 If you’d like to collaborate or discuss a project, feel free to reach out.
 

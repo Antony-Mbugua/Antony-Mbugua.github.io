@@ -7,7 +7,7 @@ order: 5
 
 # 🚀 Projects
 
-Hands-on labs and infrastructure builds across cybersecurity, systems, forensics, and enterprise networking.
+Selected work spanning transportation systems, cloud and Google Workspace solutions, cybersecurity investigations, and AI-assisted automation.
 
 ---
 
@@ -15,9 +15,9 @@ Hands-on labs and infrastructure builds across cybersecurity, systems, forensics
 
 <div class="project-filter">
   <button class="filter-btn active" onclick="filterProjects(event, 'all')">All</button>
+  <button class="filter-btn" onclick="filterProjects(event, 'Cloud')">Cloud</button>
   <button class="filter-btn" onclick="filterProjects(event, 'Cybersecurity')">Cybersecurity</button>
-  <button class="filter-btn" onclick="filterProjects(event, 'Forensics')">Forensics</button>
-  <button class="filter-btn" onclick="filterProjects(event, 'Information Security')">Information Security</button>
+  <button class="filter-btn" onclick="filterProjects(event, 'AI')">AI</button>
   <button class="filter-btn" onclick="filterProjects(event, 'Systems')">Systems</button>
   <button class="filter-btn" onclick="filterProjects(event, 'Logistics')">Logistics</button>
 </div>
